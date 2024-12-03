@@ -16,7 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: nelsonjchen/gh-pages-pelican-action@0.2.0.uses: actions/cache@v3
+    - uses: nelsonjchen/gh-pages-pelican-action@0.2.0.
+    - uses: actions/cache@v3
 
 # gemini의 권고로 입력한 부분
 # 시작
