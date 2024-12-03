@@ -20,8 +20,7 @@ jobs:
 
 # gemini의 권고로 입력한 부분
 # 시작
-    uses: actions/cache@v3
-    with:
+with:
     path: ~/.cache/pip
     key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
     restore-keys: |
