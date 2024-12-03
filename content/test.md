@@ -1,1 +1,10 @@
-{"nbformat":4,"nbformat_minor":0,"metadata":{"colab":{"provenance":[],"authorship_tag":"ABX9TyNCdyn+DZ5XmGv8exUv37e+"},"kernelspec":{"name":"python3","display_name":"Python 3"},"language_info":{"name":"python"}},"cells":[{"cell_type":"markdown","source":["test"],"metadata":{"id":"jtKJp88x-oxy"}},{"cell_type":"code","execution_count":null,"metadata":{"id":"4XHP9Etz-mAT"},"outputs":[],"source":[]}]}
+Title: pelican blog test
+Date: 2024-10-03 22:14
+Modified: 2024-03-27 22:14
+Category: Pelican
+Tags: python, pelican
+Slug: create pelican site
+Authors: admin
+Summary: Pelican Posts
+
+blog upload test
