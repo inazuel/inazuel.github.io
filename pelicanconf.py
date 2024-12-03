@@ -33,3 +33,16 @@ DEFAULT_PAGINATION = 1
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+# 파일 위치: pelicanconf.py
+
+# path-specific metadata
+EXTRA_PATH_METADATA = {
+    "extra/robots.txt": {"path": "robots.txt"},
+}
+
+# static paths will be copied without parsing their contents
+STATIC_PATHS = [
+    "images",
+    "extra/robots.txt",
+]
