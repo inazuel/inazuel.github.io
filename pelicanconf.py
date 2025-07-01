@@ -50,5 +50,5 @@ STATIC_PATHS = [
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 # 테마경로
-THEME = "pelican-themes/bootstrap2-dark"
+THEME = "pelican-themes/pelican-bootstrap3"
 THEME_STATIC_DIR = 'theme'
