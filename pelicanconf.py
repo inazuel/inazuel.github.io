@@ -46,17 +46,18 @@ STATIC_PATHS = [
     "extra/robots.txt",
 ]
 
-# 펠리칸-부트스트랩3 테마 추가
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
-# 테마경로
 import os
 
-# Pelicanconf.py 파일이 있는 디렉토리 (즉, /github/workspace)
+# pelicanconf.py 파일이 있는 디렉토리 (즉, C:\git_blog\blog\inazuel.github.io\)의 절대 경로
 PATH = os.path.abspath(os.path.dirname(__file__))
 
-# THEME: 블로그 프로젝트 폴더 안의 'pelican-themes' 폴더를 가리키도록 수정
+# THEME 변수 설정:
+# PATH (현재 디렉토리) 안에 'pelican-themes' 폴더가 있고,
+# 그 안에 'pelican-bootstrap3' 폴더가 있다는 것을 명시합니다.
 THEME = os.path.join(PATH, 'pelican-themes', 'pelican-bootstrap3')
 
-# PLUGIN_PATHS: 블로그 프로젝트 폴더 안의 'pelican-plugins' 폴더를 가리키도록 수정
+# 플러그인 경로도 동일한 방식으로 설정 (만약 pelican-plugins도 inazuel.github.io 안에 있다면)
 PLUGIN_PATHS = [os.path.join(PATH, 'pelican-plugins')]
+PLUGINS = ['i18n_subsites'] # i18n_subsites 플러그인 활성화
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']} # Jinja2 i18n 확장 활성화
