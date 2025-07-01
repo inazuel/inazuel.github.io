@@ -26,3 +26,4 @@ jobs:
         # PELICAN_THEME_FOLDER: package.json
         # GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         GITHUB_TOKEN: ${{ secrets.GH_ACTIONS_TOKEN }}
+        GH_PAGES_SAFE_DIRECTORY: true

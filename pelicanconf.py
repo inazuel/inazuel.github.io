@@ -1,6 +1,6 @@
 AUTHOR = 'inazuel'
 SITENAME = 'record of my life'
-SITEURL = ""
+SITEURL = "https://inazuel.github.io"
 
 PATH = "content"
 
