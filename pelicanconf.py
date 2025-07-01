@@ -50,5 +50,13 @@ STATIC_PATHS = [
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 # 테마경로
-THEME = "pelican-themes/pelican-bootstrap3"
-THEME_STATIC_DIR = 'theme'
+import os
+
+# Pelicanconf.py 파일이 있는 디렉토리 (즉, /github/workspace)
+PATH = os.path.abspath(os.path.dirname(__file__))
+
+# THEME: 블로그 프로젝트 폴더 안의 'pelican-themes' 폴더를 가리키도록 수정
+THEME = os.path.join(PATH, 'pelican-themes', 'pelican-bootstrap3')
+
+# PLUGIN_PATHS: 블로그 프로젝트 폴더 안의 'pelican-plugins' 폴더를 가리키도록 수정
+PLUGIN_PATHS = [os.path.join(PATH, 'pelican-plugins')]
