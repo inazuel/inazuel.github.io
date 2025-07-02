@@ -1,34 +1,33 @@
 name: Pelican CI/CD
-
 on:
   # Trigger the workflow on push or pull request,
-  # but only for the master branch
+  # but only for the main branch
   push:
     branches:
       - main
 
 jobs:
-    build:
+  build:
     runs-on: ubuntu-latest
     permissions:
-        contents: write
-        pages: write
-        id-token: write
-
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v3
+     
       - name: Configure Git Safe Directory
         run: |
           git config --global --add safe.directory /github/workspace/output
           git config --global --add safe.directory /github/workspace
-
-    steps:
-    - uses: actions/checkout@v3
-    - uses: nelsonjchen/gh-pages-pelican-action@0.2.0
-      env:
-        GH_PAGES_BRANCH: gh-pages
-        # GH_PAGES_CNAME: custom domain
-        # PELICAN_CONFIG_FILE: pelicanconf.py
-        PELICAN_CONFIG_FILE: publishconf.py
-        # PELICAN_CONTENT_FOLDER: content
-        PELICAN_THEME_FOLDER: PELICAN_THEME_FOLDER: pelican-themes/pelican-bootstrap3
-        GITHUB_TOKEN: ${{ secrets.GH_ACTIONS_TOKEN }}
-        GH_PAGES_SAFE_DIRECTORY: true
+         
+      - uses: nelsonjchen/gh-pages-pelican-action@0.2.0
+        env:
+          GH_PAGES_BRANCH: gh-pages
+          # GH_PAGES_CNAME: custom domain
+          # PELICAN_CONFIG_FILE: pelicanconf.py
+          PELICAN_CONFIG_FILE: publishconf.py
+          # PELICAN_CONTENT_FOLDER: content
+          PELICAN_THEME_FOLDER: pelican-themes/pelican-bootstrap3
+          GITHUB_TOKEN: ${{ secrets.GH_ACTIONS_TOKEN }}
+          GH_PAGES_SAFE_DIRECTORY: true
