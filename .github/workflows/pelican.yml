@@ -14,14 +14,15 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
      
-      - name: Configure Git Safe Directory
+      - name: Configure Git Safe Directory for Output
         run: |
-          git config --global --add safe.directory /github/workspace/output
-          git config --global --add safe.directory /github/workspace
+          git config --global --add safe.directory "${{ github.workspace }}/output"
+          git config --global --add safe.directory "${{ github.workspace }}"
          
-      - uses: nelsonjchen/gh-pages-pelican-action@0.2.0
+      - peaceiris/actions-gh-pages@v3
         env:
           GH_PAGES_BRANCH: gh-pages
           # GH_PAGES_CNAME: custom domain
