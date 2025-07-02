@@ -7,23 +7,35 @@ on:
   # but only for the master branch
   push:
     branches:
-      - master
+      - main	#기본값 master에서 main으로 변경 
 
 jobs:
   build:
 
     runs-on: ubuntu-22.04
+# permissions 내용 추가
+    permissions:
+      contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
+      pages: write    # GitHub Pages 배포를 위한 권한
+      id-token: write # OIDC 토큰을 얻기 위한 권한 (Pages 배포 시 필요)
+
+      # --- Git Safe Directory 수동 설정 (dubious ownership 오류 해결) ---
+      - name: Configure Git Safe Directory
+        run: |
+          git config --global --add safe.directory /github/workspace/output
+          git config --global --add safe.directory /github/workspace
+      # ------------------------------------------------------------------
 
     steps:
     - uses: actions/checkout@v3
     - uses: nelsonjchen/gh-pages-pelican-action@0.2.0
       env:
-        # GH_PAGES_BRANCH: gh-pages
+        GH_PAGES_BRANCH: gh-pages
         # GH_PAGES_CNAME: custom domain
         # PELICAN_CONFIG_FILE: pelicanconf.py
         PELICAN_CONFIG_FILE: publishconf.py
         # PELICAN_CONTENT_FOLDER: content
-        # PELICAN_THEME_FOLDER: package.json
-        # GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        PELICAN_THEME_FOLDER: PELICAN_THEME_FOLDER: pelican-themes/pelican-bootstrap3
         GITHUB_TOKEN: ${{ secrets.GH_ACTIONS_TOKEN }}
         GH_PAGES_SAFE_DIRECTORY: true
+
