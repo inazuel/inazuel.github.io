@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-22.04
 # permissions 내용 추가
-    permissions:
+  permissions:
       contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
       pages: write    # GitHub Pages 배포를 위한 권한
       id-token: write # OIDC 토큰을 얻기 위한 권한 (Pages 배포 시 필요)
