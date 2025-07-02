@@ -9,7 +9,7 @@ on:
     branches:
       - main	#기본값 master에서 main으로 변경 
 
-jobs:
+  jobs:
     build:
 
         runs-on: ubuntu-latest
