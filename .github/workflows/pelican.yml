@@ -5,58 +5,50 @@ name: Pelican CI/CD
 on:
   push:
     branches:
-      - main # 여러분의 블로그 소스 코드가 'master'에 있다면 'master'로 변경하세요.
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-22.04
     permissions:
-      contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
-      pages: write    # GitHub Pages 배포를 위한 권한
-      id-token: write # OIDC 토큰을 얻기 위한 권한 (Pages 배포 시 필요)
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # --- Git Safe Directory 수동 설정 (dubious ownership 오류 해결) ---
-      # Pelican 빌드 시 `output` 디렉토리 생성 및 Git 안전 문제 해결
+
       - name: Configure Git Safe Directory for Output
         run: |
           git config --global --add safe.directory "${{ github.workspace }}/output"
-          git config --global --add safe.directory "${{ github.workspace }}" # 워크스페이스 자체도 안전 디렉토리로 추가
+          git config --global --add safe.directory "${{ github.workspace }}" 
 
-      # --- Python 환경 설정 ---
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x' # 최신 Python 3 버전을 사용합니다.
+          python-version: '3.10
 
-      # --- Python 종속성 설치 (Pelican, Markdown 등) ---
       - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
-          # requirements.txt 파일이 있다면 아래 한 줄로 대체 가능:
-          # pip install -r requirements.txt
-          # requirements.txt가 없다면 필수 패키지들을 직접 명시:
-          pip install pelican Markdown typogrify docutils
+          pip install -r requirements.txt
 
-      # --- Pelican 사이트 빌드 ---
+
       - name: Build Pelican site
         run: |
           pelican content -s publishconf.py -t pelican-themes/pelican-bootstrap3 -o output
         env:
-          # 필요한 환경 변수가 있다면 여기에 추가 (현재는 특별히 없음)
-          # PELICAN_THEME_FOLDER는 `pelican` 명령의 `-t` 옵션으로 직접 전달됩니다.
+
 
       # --- GitHub Pages에 배포 ---
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3 # <--- 이 부분이 핵심입니다!
-        if: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }} # 기본 브랜치에서만 배포
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }} 
+
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # 기본 GITHUB_TOKEN 사용
-          publish_dir: ./output # 빌드된 HTML 파일이 있는 디렉토리
-          publish_branch: gh-pages # GitHub Pages가 호스팅될 브랜치 (보통 gh-pages)
-          # CNAME을 사용하지 않는 경우 'none'으로 설정하거나, 주석 처리
-          # CNAME을 사용하는 경우: cname: your.custom.domain.com
-          cname: none # 커스텀 도메인을 사용하지 않는다면 'none'으로 설정
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          publish_dir: ./output 
+          publish_branch: gh-pages 
+          cname: none 
