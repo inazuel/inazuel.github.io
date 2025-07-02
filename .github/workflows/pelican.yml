@@ -11,7 +11,8 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+
+    runs-on: ubuntu-latest
 # permissions 내용 추가
     permissions:
         contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
