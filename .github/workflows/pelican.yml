@@ -21,7 +21,7 @@ jobs:
           git config --global --add safe.directory /github/workspace/output
           git config --global --add safe.directory /github/workspace
          
-      - uses: nelsonjchen/gh-pages-pelican-action@v1
+      - uses: nelsonjchen/gh-pages-pelican-action@main
         env:
           GH_PAGES_BRANCH: gh-pages
           # GH_PAGES_CNAME: custom domain
