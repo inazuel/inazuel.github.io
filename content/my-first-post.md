@@ -1,6 +1,6 @@
-Title: pelican blog test
-Date: 2024-10-03 22:14
-Modified: 2024-03-27 22:14
+Title: my-first-post
+Date: 2025-07-03 18:25
+Modified: 2025-07-03 18:25
 Category: Pelican
 Tags: python, pelican
 Slug: create pelican site
