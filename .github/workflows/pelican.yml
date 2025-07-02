@@ -10,9 +10,9 @@ on:
       - main	#기본값 master에서 main으로 변경 
 
 jobs:
-  build:
+    build:
 
-    runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
 # permissions 내용 추가
     permissions:
         contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
@@ -38,4 +38,3 @@ jobs:
         PELICAN_THEME_FOLDER: PELICAN_THEME_FOLDER: pelican-themes/pelican-bootstrap3
         GITHUB_TOKEN: ${{ secrets.GH_ACTIONS_TOKEN }}
         GH_PAGES_SAFE_DIRECTORY: true
-
