@@ -1,5 +1,3 @@
-# 파일 위치: .github/workflows/pelican.yml
-
 name: Pelican CI/CD
 
 on:
@@ -7,24 +5,21 @@ on:
   # but only for the master branch
   push:
     branches:
-      - main	#기본값 master에서 main으로 변경 
+      - main
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-# permissions 내용 추가
     permissions:
-        contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
-        pages: write    # GitHub Pages 배포를 위한 권한
-        id-token: write # OIDC 토큰을 얻기 위한 권한 (Pages 배포 시 필요)
+        contents: write
+        pages: write
+        id-token: write
 
-      # --- Git Safe Directory 수동 설정 (dubious ownership 오류 해결) ---
       - name: Configure Git Safe Directory
         run: |
           git config --global --add safe.directory /github/workspace/output
           git config --global --add safe.directory /github/workspace
-      # ------------------------------------------------------------------
 
     steps:
     - uses: actions/checkout@v3
