@@ -70,3 +70,17 @@ SHOW_ARTICLE_CATEGORY = True
 
 # 메인 페이지에 글 목록 대신 글의 전체 내용을 표시할지 여부
 SHOW_FULL_ARTICLE = True
+
+
+# 기존 STATIC_PATHS에 'static' 추가
+STATIC_PATHS = ['images', 'static'] # 'static'이 이미 있다면 추가하지 않아도 됩니다.
+
+# 기존 STATIC_PATHS에 'static' 추가
+STATIC_PATHS = ['images', 'static'] # 'static'이 이미 있다면 추가하지 않아도 됩니다.
+
+# 폰트 파일 경로 지정
+EXTRA_PATH_METADATA = {
+    'static/fonts/D2Coding-Ver1.3.2-20180524-all.ttf': {'path': 'static/fonts/D2Coding-Ver1.3.2-20180524-all.ttf'},
+}
+# 사용자 정의 CSS 파일 경로 (폰트 적용)
+CUSTOM_CSS = 'static/css/custom.css'
