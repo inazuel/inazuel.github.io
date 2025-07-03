@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>record of my life - Pelican</title><link href="https://inazuel.github.io/" rel="alternate"></link><link href="https://inazuel.github.io/feeds/pelican.atom.xml" rel="self"></link><id>https://inazuel.github.io/</id><updated>2025-07-04T00:35:00-09:00</updated><entry><title>pelican blog 폰트 변경하기</title><link href="https://inazuel.github.io/20250704_01_fontchange.html" rel="alternate"></link><published>2025-07-04T00:35:00-09:00</published><updated>2025-07-04T00:35:00-09:00</updated><author><name>inazuel</name></author><id>tag:inazuel.github.io,2025-07-04:/20250704_01_fontchange.html</id><summary type="html">&lt;p&gt;Pelican Posts&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 폰트를 변경했다. 폰트명은 D2Coding-Ver1.3.2-20180524-all으로 폰트명에서 알 수 있듯이 D2Coding, 즉 코딩용 폰트이며 네이버에서 만든 것이다. 멋은 없지만 보는 사람들이 오해하거나 잘못 읽힐 여지가 없는 폰트이다. 폰트의 변경 방법은 오로지 구글의 AI인 Gemini의 도움을 받았다. &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;다운로드는 &lt;a href="https://github.com/naver/d2codingfont?tab=readme-ov-file"&gt;d2codingfont&lt;/a&gt;에서 할 수 있다. &lt;br&gt;
-  다운로드한 폰트를 inazuel.github.io/content/static/fonts 폴더 안에 복사한다.(환경이 저와 같다면 폴더는 없을 겁니다. 이럴때는 폴더를 만들어주면 됩니다.)&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>record of my life - Pelican</title><link href="https://inazuel.github.io/" rel="alternate"></link><link href="https://inazuel.github.io/feeds/pelican.atom.xml" rel="self"></link><id>https://inazuel.github.io/</id><updated>2025-07-04T00:35:00-09:00</updated><entry><title>pelican blog 폰트 변경하기</title><link href="https://inazuel.github.io/20250704_01_fontchange.html" rel="alternate"></link><published>2025-07-04T00:35:00-09:00</published><updated>2025-07-04T00:35:00-09:00</updated><author><name>inazuel</name></author><id>tag:inazuel.github.io,2025-07-04:/20250704_01_fontchange.html</id><summary type="html">&lt;p&gt;Pelican Posts&lt;/p&gt;</summary><content type="html">&lt;p&gt;&amp;nbsp;&amp;nbsp;블로그 폰트를 변경했다. 폰트명은 D2Coding-Ver1.3.2-20180524-all으로 폰트명에서 알 수 있듯이 D2Coding, 즉 코딩용 폰트이며 네이버에서 만든 것이다. 멋은 없지만 보는 사람들이 오해하거나 잘못 읽힐 여지가 없는 폰트이다. 폰트의 변경 방법은 오로지 구글의 AI인 Gemini의 도움을 받았다. &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;다운로드는 &lt;a href="https://github.com/naver/d2codingfont?tab=readme-ov-file"&gt;d2codingfont&lt;/a&gt;에서 할 수 있다. &lt;br&gt;
+다운로드한 폰트를 inazuel.github.io/content/static/fonts 폴더 안에 복사한다.(환경이 저와 같다면 폴더는 없을 겁니다. 이럴때는 폴더를 만들어주면 됩니다.)&lt;br&gt;
 pelicanconf.py ~~(또는 publishconf.py)~~에 아래의 코드를 입력한다. (저는 pelicanconf.py 기준으로 작성했습니다.)&lt;br&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;#&lt;/span&gt; 기존 STATIC_PATHS에 &amp;#39;static&amp;#39; 추가
 STATIC_PATHS = [&amp;#39;images&amp;#39;, &amp;#39;static&amp;#39;] # &amp;#39;static&amp;#39;이 이미 있다면 추가하지 않아도 됩니다.
@@ -13,8 +13,8 @@ EXTRA_PATH_METADATA = {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br&gt;
-  content/static/css/custom.css 파일을 생성한다.&lt;br&gt;
-  생성된 파일에 아래의 코드를 입력한다.&lt;br&gt;&lt;/p&gt;
+&amp;nbsp;&amp;nbsp;content/static/css/custom.css 파일을 생성한다.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;생성된 파일에 아래의 코드를 입력한다.&lt;br&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cm"&gt;/* 웹 폰트 정의 */&lt;/span&gt;
 &lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;face&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;D2Coding&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -38,20 +38,21 @@ EXTRA_PATH_METADATA = {
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;br&gt;
-  다시 텍스트 편집기로 pelicanconf.py 에 아래의 코드를 추가한다.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;다시 텍스트 편집기로 pelicanconf.py 에 아래의 코드를 추가한다.&lt;br&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;#&lt;/span&gt; 사용자 정의 CSS 파일 경로
 CUSTOM_CSS = &amp;#39;static/css/custom.css&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;빌드 및 배포
+&lt;p&gt;빌드 및 배포&lt;br&gt;
 '''
 git add .
 git commit -m "Apply D2Coding font to blog using all-in-one file"
 git push origin master # 또는 main
 '''
 &lt;br&gt;
-이것으로 폰트 변경을 완료했습니다.&lt;/p&gt;
+&amp;nbsp;&amp;nbsp;이것으로 폰트 변경을 완료되었다.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;아래의 접기/펼치기는 gemini의 답변을 기록용으로 남겨놨다.&lt;br&gt;&lt;/p&gt;
 &lt;!-- 접기 시작--&gt;
 
 &lt;details&gt;
@@ -202,4 +203,4 @@ Pelican이 폰트 파일을 빌드된 사이트로 복사하도록 설정해야 
 이 지침대로 따라하면 D2Coding 폰트가 여러분의 블로그에 성공적으로 적용될 겁니다. 혹시 적용에 문제가 있다면, GitHub Actions 로그나 브라우저 개발자 도구(F12)의 'Network' 탭에서 폰트 파일이 제대로 로드되는지 확인해보세요.
 &lt;/details&gt;
 
-&lt;!-- 접기 시작--&gt;</content><category term="Pelican"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>my-first-post</title><link href="https://inazuel.github.io/create%20pelican%20site.html" rel="alternate"></link><published>2025-07-03T18:25:00-09:00</published><updated>2025-07-03T18:25:00-09:00</updated><author><name>admin</name></author><id>tag:inazuel.github.io,2025-07-03:/create pelican site.html</id><summary type="html">&lt;p&gt;Pelican Posts&lt;/p&gt;</summary><content type="html">&lt;p&gt;blog upload test&lt;/p&gt;</content><category term="Pelican"></category><category term="python"></category><category term="pelican"></category></entry></feed>
+&lt;!-- 접기 끝--&gt;</content><category term="Pelican"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>my-first-post</title><link href="https://inazuel.github.io/create%20pelican%20site.html" rel="alternate"></link><published>2025-07-03T18:25:00-09:00</published><updated>2025-07-03T18:25:00-09:00</updated><author><name>admin</name></author><id>tag:inazuel.github.io,2025-07-03:/create pelican site.html</id><summary type="html">&lt;p&gt;Pelican Posts&lt;/p&gt;</summary><content type="html">&lt;p&gt;blog upload test&lt;/p&gt;</content><category term="Pelican"></category><category term="python"></category><category term="pelican"></category></entry></feed>
