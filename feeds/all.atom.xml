@@ -44,13 +44,14 @@ EXTRA_PATH_METADATA = {
 CUSTOM_CSS = &amp;#39;static/css/custom.css&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;빌드 및 배포&lt;br&gt;
-'''
-git add .
-git commit -m "Apply D2Coding font to blog using all-in-one file"
-git push origin master # 또는 main
-'''
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;빌드 및 배포&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add .
+git commit -m &amp;quot;Apply D2Coding font to blog using all-in-one file&amp;quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp;이것으로 폰트 변경을 완료되었다.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;아래의 접기/펼치기는 gemini의 답변을 기록용으로 남겨놨다.&lt;br&gt;&lt;/p&gt;
 &lt;!-- 접기 시작--&gt;
