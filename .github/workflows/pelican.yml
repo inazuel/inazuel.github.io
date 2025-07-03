@@ -1,55 +1,46 @@
 # 파일 위치: .github/workflows/pelican.yml
 
-name: Pelican CI/CD
+name: Pelican CI/CD # 워크플로우 이름
 
 on:
   push:
     branches:
-      - master
+      - master # 블로그 콘텐츠를 푸시하는 브랜치 (master 또는 main)
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04 # 워크플로우를 실행할 운영체제 환경
     permissions:
-      contents: write
-      pages: write
-      id-token: write
+      contents: write # 저장소 콘텐츠(gh-pages 브랜치)에 쓰기 권한
+      pages: write    # GitHub Pages 배포를 위한 권한
+      id-token: write # OIDC 토큰을 얻기 위한 권한 (Pages 배포 시 필요)
 
     steps:
+      # 1. 저장소 체크아웃: 워크플로우가 저장소 코드를 가져오도록 합니다.
       - name: Checkout repository
         uses: actions/checkout@v3
 
-
-      - name: Configure Git Safe Directory for Output
-        run: |
-          git config --global --add safe.directory "${{ github.workspace }}/output"
-          git config --global --add safe.directory "${{ github.workspace }}" 
-
-
+      # 2. Python 환경 설정: Pelican 빌드에 필요한 Python 환경을 설정합니다.
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.10' # 사용할 Python 버전 지정
 
+      # 3. Python 의존성 설치: requirements.txt에 명시된 패키지들을 설치합니다.
       - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-
+      # 4. Pelican 사이트 빌드: 콘텐츠를 HTML 파일로 변환하여 output 폴더에 생성합니다.
       - name: Build Pelican site
-        run: |
-          pelican content -s publishconf.py -t pelican-themes/pelican-bootstrap3 -o output
-          echo "--- Contents of the output directory after build ---"
-          ls -la output/ 
-          echo "----------------------------------------------------"
+        run: pelican content -s publishconf.py -t pelican-themes/pelican-bootstrap3 -o output
 
-      # --- GitHub Pages에 배포 ---
+      # 5. GitHub Pages에 배포: 빌드된 output 폴더의 내용을 gh-pages 브랜치로 푸시합니다.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == format('refs/heads/master', github.event.repository.default_branch) }} 
-
+        # 'master' 브랜치에 푸시할 때만 배포가 실행되도록 합니다.
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
-          publish_dir: ./output 
-          publish_branch: gh-pages 
-          cname: none 
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub Actions 기본 토큰 사용
+          publish_dir: ./output                     # 빌드된 파일이 있는 디렉토리
+          publish_branch: gh-pages                  # GitHub Pages가 호스팅될 브랜치
+          cname: none                               # 커스텀 도메인을 사용하지 않을 경우 'none' 유지
