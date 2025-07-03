@@ -61,3 +61,9 @@ THEME = os.path.join(PATH, 'pelican-themes', 'pelican-bootstrap3')
 PLUGIN_PATHS = [os.path.join(PATH, 'pelican-plugins')]
 PLUGINS = ['i18n_subsites'] # i18n_subsites 플러그인 활성화
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']} # Jinja2 i18n 확장 활성화
+
+# 게시물 상단에 저자 정보를 표시할지 여부
+SHOW_ARTICLE_AUTHOR = True
+
+# 게시물 상단에 카테고리 정보를 표시할지 여부
+SHOW_ARTICLE_CATEGORY = True
