@@ -67,3 +67,6 @@ SHOW_ARTICLE_AUTHOR = True
 
 # 게시물 상단에 카테고리 정보를 표시할지 여부
 SHOW_ARTICLE_CATEGORY = True
+
+# 메인 페이지에 글 목록 대신 글의 전체 내용을 표시할지 여부
+SHOW_FULL_ARTICLE = True
