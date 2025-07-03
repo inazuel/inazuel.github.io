@@ -113,8 +113,8 @@ record of my life            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>블로그 폰트를 변경했다. 폰트명은 D2Coding-Ver1.3.2-20180524-all으로 폰트명에서 알 수 있듯이 D2Coding, 즉 코딩용 폰트이며 네이버에서 만든 것이다. 멋은 없지만 보는 사람들이 오해하거나 잘못 읽힐 여지가 없는 폰트이다. 폰트의 변경 방법은 오로지 구글의 AI인 Gemini의 도움을 받았다. <br></p>
-<p>다운로드는 [d2codingfont]https://github.com/naver/d2codingfont?tab=readme-ov-file 에서 할 수 있다. <br>
-다운로드한 폰트를 inazuel.github.io/content/static/fonts 폴더 안에 복사한다.(환경이 저와 같다면 폴더는 없을 겁니다. 이럴때는 폴더를 만들어주면 됩니다.)<br>
+<p>다운로드는 <a href="https://github.com/naver/d2codingfont?tab=readme-ov-file">d2codingfont</a>에서 할 수 있다. <br>
+  다운로드한 폰트를 inazuel.github.io/content/static/fonts 폴더 안에 복사한다.(환경이 저와 같다면 폴더는 없을 겁니다. 이럴때는 폴더를 만들어주면 됩니다.)<br>
 pelicanconf.py ~~(또는 publishconf.py)~~에 아래의 코드를 입력한다. (저는 pelicanconf.py 기준으로 작성했습니다.)<br></p>
 <div class="highlight"><pre><span></span><code><span class="gh">#</span> 기존 STATIC_PATHS에 &#39;static&#39; 추가
 STATIC_PATHS = [&#39;images&#39;, &#39;static&#39;] # &#39;static&#39;이 이미 있다면 추가하지 않아도 됩니다.
@@ -126,8 +126,8 @@ EXTRA_PATH_METADATA = {
 </code></pre></div>
 
 <p><br>
-content/static/css/custom.css 파일을 생성한다.<br>
-생성된 파일에 아래의 코드를 입력한다.<br></p>
+  content/static/css/custom.css 파일을 생성한다.<br>
+  생성된 파일에 아래의 코드를 입력한다.<br></p>
 <div class="highlight"><pre><span></span><code><span class="cm">/* 웹 폰트 정의 */</span>
 <span class="err">@</span><span class="nx">font</span><span class="o">-</span><span class="nx">face</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">font</span><span class="o">-</span><span class="nx">family</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">D2Coding</span><span class="err">&#39;</span><span class="p">;</span>
@@ -152,7 +152,7 @@ content/static/css/custom.css 파일을 생성한다.<br>
 </code></pre></div>
 
 <p><br>
-다시 텍스트 편집기로 pelicanconf.py 에 아래의 코드를 추가한다.<br></p>
+  다시 텍스트 편집기로 pelicanconf.py 에 아래의 코드를 추가한다.<br></p>
 <div class="highlight"><pre><span></span><code><span class="gh">#</span> 사용자 정의 CSS 파일 경로
 CUSTOM_CSS = &#39;static/css/custom.css&#39;
 </code></pre></div>
@@ -165,7 +165,8 @@ git push origin master # 또는 main
 '''
 <br>
 이것으로 폰트 변경을 완료했습니다.</p>
-<h2>접기 시작</h2>
+<!-- 접기 시작-->
+
 <details>
 <summary>접기/펼치기</summary>
 
@@ -314,7 +315,7 @@ Pelican이 폰트 파일을 빌드된 사이트로 복사하도록 설정해야 
 이 지침대로 따라하면 D2Coding 폰트가 여러분의 블로그에 성공적으로 적용될 겁니다. 혹시 적용에 문제가 있다면, GitHub Actions 로그나 브라우저 개발자 도구(F12)의 'Network' 탭에서 폰트 파일이 제대로 로드되는지 확인해보세요.
 </details>
 
-<h2>접기 끝</h2>
+<!-- 접기 시작-->
             </div>
             <!-- /.entry-content -->
         </article>
