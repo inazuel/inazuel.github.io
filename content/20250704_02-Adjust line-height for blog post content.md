@@ -1,4 +1,4 @@
-Title: pelican blog 폰트 변경하기
+Title: pelican blog 02.줄간격 변경하기
 Date: 2025-07-04 20:00
 Modified: 2025-07-04 20:00
 Category: Pelican
