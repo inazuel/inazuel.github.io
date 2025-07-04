@@ -22,5 +22,5 @@ code, pre, .highlight {
 
 /* 블로그 글 본문의 줄 간격 설정 */
 body {
-    line-height: 1.6 !important; /* 폰트 크기의 160% (1.6배) */
+    line-height: 3.0 !important; /* 폰트 크기의 160% (1.6배) */
 }
