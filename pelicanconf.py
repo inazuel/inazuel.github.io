@@ -84,3 +84,15 @@ EXTRA_PATH_METADATA = {
 }
 # 사용자 정의 CSS 파일 경로 (폰트 적용)
 CUSTOM_CSS = 'static/css/custom.css'
+
+# Google Search Console 소유권 확인 메타 태그
+# 'YOUR_GOOGLE_SITE_VERIFICATION_CODE' 부분을 구글에서 받은 실제 코드로 바꿔주세요.
+EXTRA_HEADER = '''
+<meta name="google-site-verification" content="QpxwOhcHx8CV2duztK1n4LwWRQKfrZaC28FOX6pr-4w" />
+'''
+
+# 여러 메타 태그를 추가하고 싶다면 여러 줄로 작성해도 됩니다.
+# EXTRA_HEADER = '''
+# <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" />
+# <meta name="naver-site-verification" content="YOUR_NAVER_CODE"/>
+# '''
