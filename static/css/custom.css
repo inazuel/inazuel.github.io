@@ -16,8 +16,6 @@ p, li, a, span {
 /* 코드 블록에 더 명확하게 적용 (프로그래밍 폰트이므로) */
 code, pre, .highlight {
     font-family: 'D2Coding', monospace !important;
-    /* 필요하다면 코드 블록의 폰트 크기 조절 */
-    /* font-size: 0.9em; */
 }
 
 /* 기존 D2Coding 폰트 설정 아래에 추가하거나 적절한 위치에 추가 */
@@ -25,5 +23,5 @@ code, pre, .highlight {
 /* 블로그 글 본문의 줄 간격 설정 */
 .article-content p,
 .article-content li {
-    line-height: 2.0;
+    line-height: 1.6 !important;
 }
