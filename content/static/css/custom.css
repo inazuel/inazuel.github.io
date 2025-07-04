@@ -20,7 +20,8 @@ code, pre, .highlight {
 
 /* 기존 D2Coding 폰트 설정 아래에 추가하거나 적절한 위치에 추가 */
 
-/* 블로그 글 본문의 줄 간격 설정 */
-body {
-    line-height: 3.0 !important; /* 폰트 크기의 160% (1.6배) */
+/* 블로그 글 본문의 줄 간격 설정 (더 강력한 선택자) */
+body .article-content p,
+body .article-content li {
+    line-height: 2.0 /* 폰트 크기의 200% */
 }
