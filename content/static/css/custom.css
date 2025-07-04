@@ -18,7 +18,8 @@ code, pre, .highlight {
     font-family: 'D2Coding', monospace !important;
 }
 
-/* 웹페이지 전체의 기본 줄 간격 설정 */
-body {
-    line-height: 2.0 !important; /* 폰트 크기의 160% (1.6배) */
+/* 블로그 글 본문(아티클 콘텐츠)의 줄 간격만 설정 */
+.article-content p,
+.article-content li {
+    line-height: 2.0 !important; /* 폰트 크기의 200% (2.0배) */
 }
