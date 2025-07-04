@@ -19,3 +19,11 @@ code, pre, .highlight {
     /* 필요하다면 코드 블록의 폰트 크기 조절 */
     /* font-size: 0.9em; */
 }
+
+/* 기존 D2Coding 폰트 설정 아래에 추가하거나 적절한 위치에 추가 */
+
+/* 블로그 글 본문의 줄 간격 설정 */
+.article-content p,
+.article-content li {
+    line-height: 1.6; /* 폰트 크기의 160% (1.6배) */
+}
