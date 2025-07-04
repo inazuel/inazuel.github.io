@@ -21,7 +21,6 @@ code, pre, .highlight {
 /* 기존 D2Coding 폰트 설정 아래에 추가하거나 적절한 위치에 추가 */
 
 /* 블로그 글 본문의 줄 간격 설정 */
-.article-content p,
-.article-content li {
-    line-height: 1.6 !important;
+body {
+    line-height: 1.6 !important; /* 폰트 크기의 160% (1.6배) */
 }
