@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://inazuel.github.io/</loc>
-<lastmod>2025-07-07T13:52:16-00:00</lastmod>
+<lastmod>2025-07-07T15:57:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/tags.html</loc>
-<lastmod>2025-07-07T13:52:16-00:00</lastmod>
+<lastmod>2025-07-07T15:57:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/categories.html</loc>
-<lastmod>2025-07-07T13:52:16-00:00</lastmod>
+<lastmod>2025-07-07T15:57:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/authors.html</loc>
-<lastmod>2025-07-07T13:52:16-00:00</lastmod>
+<lastmod>2025-07-07T15:57:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/archives.html</loc>
-<lastmod>2025-07-07T13:52:16-00:00</lastmod>
+<lastmod>2025-07-07T15:57:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://inazuel.github.io/20250708_01_google_search_console.html</loc>
+<lastmod>2025-07-08T00:55:00-09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -61,20 +68,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://inazuel.github.io/category/pelican.html</loc>
-<lastmod>2025-07-04T20:00:00-09:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://inazuel.github.io/tag/python.html</loc>
-<lastmod>2025-07-04T20:00:00-09:00</lastmod>
+<lastmod>2025-07-08T00:55:00-09:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/tag/pelican.html</loc>
+<lastmod>2025-07-08T00:55:00-09:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://inazuel.github.io/tag/python.html</loc>
 <lastmod>2025-07-04T20:00:00-09:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://inazuel.github.io/author/inazuel.html</loc>
-<lastmod>2025-07-04T20:00:00-09:00</lastmod>
+<lastmod>2025-07-08T00:55:00-09:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
