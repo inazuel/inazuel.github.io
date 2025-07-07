@@ -7,19 +7,19 @@ Slug: 20250708_01_google_search_console
 Authors: inazuel
 Summary: Pelican Posts
 
-&nbsp;&nbsp;아무리 글을 쓴다 해도 보는 사람이 없으면 굳이 블로그를 할 필요가 없다.  나에게는 내 블로그가 검색되기를 바라기에 구글 search console에 내 블로그를 등록했다. 다만 문제가 있다면, 내가 사용하는 것은 pelican이고 지킬(Jekyll) 에 비하면 그 정보가 너무 적었다. 정확히는 적다고 느꼈다. 그 원인은 나는 웹이나 프로그래밍에 대해서 아는 바가 없기때문다. 공식 문서를 읽더라도 이해하기에 어려움이 있었기에 ai (google gemini)를 사용해서 구글 search console 에 내 블로그를 등록했다. 지금은 심사기간이고, 만약 여러분이 이 글을 읽고 있다면 이 방법은 성공한 것이라고 할 수 있다.<br>
+&nbsp;&nbsp;이번에는 구글 search console에 내 블로그를 등록했다. 다만 문제가 있다면, 내가 사용하는 것은 pelican이고 지킬(Jekyll) 에 비하면 그 정보가 너무 적었다. 정확히는 적다고 느꼈다. 그 원인은 나는 웹이나 프로그래밍에 대해서 아는 바가 없기때문다. 공식 문서를 읽더라도 이해하기에 어려움이 있었기에 ai (google gemini)를 사용해서 구글 search console 에 내 블로그를 등록했다. 지금은 심사기간이고, 만약 여러분이 이 글을 읽고 있다면 이 방법은 성공한 것이라고 할 수 있다.<br>
 
 **플러그인을 설치하는 방법도 있다고 합니다. 제가 한 방법이 더 어려울 수도 있으니 플러그인을 사용하는 방법을 찾아보시는 것도 좋으리라 생각합니다.**<br>
 
 [Github-Blog-검색창-노출시키기](https://velog.io/@eona1301/Github-Blog-%EA%B2%80%EC%83%89%EC%B0%BD-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0)를 참고하였다. 이 글에서 알 수 있는 것은 아래와 같다.<br>
 
-1. https://search.google.com/search-console/about 에 접속하여 'URL 접두어' 방식으로 블로그를 등록한다.
+1. [https://search.google.com/search-console/about](https://search.google.com/search-console/about) 에 접속하여 'URL 접두어' 방식으로 블로그를 등록한다.
 2. 'HTML 파일'방식으로 등록후 /root 에 이동시킨다. (이 방법이 pelican에서는 많이 다르다.)
 3. 'sitemap.xml'를 설정해야 한다.
 4. 'robots.txt'를 만들어줘야 한다.
 
-\\&nbsp;&nbsp;1. 구글 search console에서 우측의 'URL 접두어'를 선택한다. 다음, 'HTML 파일'을 선택한다. 'googlexxxxxxxxxxxxxxxxx.html' 형식의 파일을 다운로드 할 수 있을 것이다. 이것을 xxxxx.github.io\content\extra 폴더 내부로 이동시킨다.
-\\&nbsp;&nbsp;2. 동일한 xxxxxl.github.io\content\extra 폴더 내부에 'robots.txt' 파일을 만들어주고 아래의 내용을 입력해준다. 만약 해당 폴더가 없다면 만들어주면 된다.
+&nbsp;&nbsp;1. 구글 search console에서 우측의 'URL 접두어'를 선택한다. 다음, 'HTML 파일'을 선택한다. 'googlexxxxxxxxxxxxxxxxx.html' 형식의 파일을 다운로드 할 수 있을 것이다. 이것을 xxxxx.github.io\content\extra 폴더 내부로 이동시킨다. <br>
+&nbsp;&nbsp;2. 동일한 xxxxxl.github.io\content\extra 폴더 내부에 'robots.txt' 파일을 만들어주고 아래의 내용을 입력해준다. 만약 해당 폴더가 없다면 만들어주면 된다.
 ```
 User-agent: *
 Allow: /
@@ -28,15 +28,15 @@ Allow: /
 Sitemap: https://xxxxx.github.io/sitemap.xml 
 ```
 
-\\&nbsp;&nbsp;3. root에 위치해있는 pelicanconf.py 를 편집해줘야 한다. pelicanconf.py를 열고 아래와 같은 내용들이 포함되어야 한다.
+&nbsp;&nbsp;3. root에 위치해있는 pelicanconf.py 를 편집해줘야 한다. pelicanconf.py를 열고 아래와 같은 내용들이 포함되어야 한다.
 
-3.1.  STATIC_PATHS를 찾아 아래와 같이 되어있는지 확인한다. 만약 STATIC_PATHS이 없다면 아래와 같이 추가해주는 것이 좋다. 구글 search console 등록을 하기때문에 다른 것은 없더라도 extra 는 반드시 포함되어있어야 한다.
+&nbsp;&nbsp;3.1.  STATIC_PATHS를 찾아 아래와 같이 되어있는지 확인한다. 만약 STATIC_PATHS이 없다면 아래와 같이 추가해주는 것이 좋다. 구글 search console 등록을 하기때문에 다른 것은 없더라도 extra 는 반드시 포함되어있어야 한다.
 ```
 STATIC_PATHS = ['images', 'extra', 'static']
 ```
 <br>
 
-3.2. EXTRA_PATH_METADATA를 찾아 아래의 내용을 추가해야 한다.
+&nbsp;&nbsp;3.2. EXTRA_PATH_METADATA를 찾아 아래의 내용을 추가해야 한다.
 
 ```
 EXTRA_PATH_METADATA = {
@@ -46,9 +46,9 @@ EXTRA_PATH_METADATA = {
 }
 ```
 
-&nbsp;&nbsp;이 부분은 추가적인 설명이 필요한데, D2Coding-Ver1.3.2-20180524-all.ttf 라는 폰트를 별도로 추가했기 때문에 이와같은 구조가 된 것이다. 중요한 것은 마지막줄의  'extra/google***************.html': {'path': 'google***************.html'이다. 이 부분을 앞에서 다운받은 html 파일의 이름과 동일하게 바꾸고 추가해주면 된다.<br>
+&nbsp;&nbsp;이 부분은 추가적인 설명이 필요한데, D2Coding-Ver1.3.2-20180524-all.ttf 라는 폰트를 별도로 추가했기 때문에 이와같은 구조가 된 것이기때문에 일반적인 상황이라면, font 부분은 제거해주는 것이 좋을 것이다. robots.txt 부분과  'extra/google***************.html': {'path': 'google***************.html' 부분이 중요하다. 이 부분을 앞에서 다운받은 html 파일의 이름과 동일하게 바꾸고 추가해주면 된다.<br>
 
-3.3. 그 후 pelicanconf.py에 아래의 내용을 추가해준다. 이 내용의 위치는 크게 상관 없는 거 같다. 그래서 가장 아래에 추가해줬다.
+&nbsp;&nbsp;3.3. 그 후 pelicanconf.py에 아래의 내용을 추가해준다. 이 내용의 위치는 크게 상관 없는 거 같다. 나는 pelicanconf.py 내 하단 부분에 추가했다.
 
 ```
 # --- READERS 설정 (이 부분을 새로 추가) ---
@@ -68,7 +68,7 @@ Done: Processed 3 articles, 0 drafts, 0 hidden articles, 0 pages, 0 hidden pages
 ```
 <br>
 
-3.4. pelicanconf.py 하단부에 아래의 내용을 입력하여 sitemap을 생성한다.
+&nbsp;&nbsp;3.4. pelicanconf.py 하단부에 아래의 내용을 입력하여 sitemap을 생성한다.
 ```
 # 사이트맵 생성----------------------------------
 SITEMAP = {
@@ -88,7 +88,7 @@ SITEMAP = {
 ```
 <br>
 
-\\&nbsp;&nbsp;4. 이제 남은것은 cmd에서 아래의 명령어를 실행해준다. 그 다음은 구글 search console에서 내용을 이어서 해주면 된다. 이 부분은 개인의 상황, 설정 등에 따라 달라질 수 있으니 각자 적절하게 바꿔주면 된다. 
+&nbsp;&nbsp;4. 이제 남은것은 cmd에서 아래의 명령어를 실행해준다. 그 다음은 구글 search console에서 내용을 이어서 해주면 된다. 이 부분은 개인의 상황, 설정 등에 따라 달라질 수 있으니 각자 적절하게 바꿔주면 된다. 
 ```
 rmdir /s /q output
 git add .
@@ -111,4 +111,4 @@ https://xxxxx.github.io/robots.txt
 sitemap.xml
 ```
 <br>
-&nbsp;&nbsp;일단, 이것으로 구글 search console 추가는 완료되었고, 구글 search console 블로그가 등록되기를 기다리기만 하면 된다. 가능하신 분들은 플러그인을 사용해보는 것도 좋을 것이다.
+&nbsp;&nbsp;이것으로 구글 search console 추가는 완료되었고, 구글 search console 블로그가 등록되기를 기다리기만 하면 된다. 가능하신 분들은 플러그인을 사용해보는 것도 좋을 것이다.
