@@ -1,0 +1,23 @@
+/* 웹 폰트 정의 */
+@font-face {
+    font-family: 'D2Coding';
+    src: url('/static/fonts/D2Coding-Ver1.3.2-20180524-all.ttf') format('truetype');
+    font-weight: normal; /* 단일 파일이므로 normal만 정의 */
+    font-style: normal;
+}
+
+/* 블로그 전체에 D2Coding 폰트 적용 */
+body, h1, h2, h3, h4, h5, h6,
+.navbar, .btn, .form-control,
+p, li, a, span {
+    font-family: 'D2Coding', monospace !important;
+}
+
+/* 코드 블록에 더 명확하게 적용 (프로그래밍 폰트이므로) */
+code, pre, .highlight {
+    font-family: 'D2Coding', monospace !important;
+}
+
+body {
+    line-height: 2.0 !important;
+}

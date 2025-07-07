@@ -37,7 +37,7 @@ THEME = os.path.join(BASE_DIR, 'pelican-themes', 'pelican-bootstrap3') # 'pelica
 
 # 플러그인 경로 (pelicanconf.py 기준 pelican-plugins)
 PLUGIN_PATHS = [os.path.join(BASE_DIR, 'pelican-plugins')]
-PLUGINS = ['i18n_subsites']
+PLUGINS = ['i18n_subsites', 'sitemap']
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 # --- 정적 파일 및 메타데이터 설정 ---
@@ -48,6 +48,7 @@ STATIC_PATHS = ['images', 'extra', 'static']
 EXTRA_PATH_METADATA = {
     "extra/robots.txt": {"path": "robots.txt"},
     'static/fonts/D2Coding-Ver1.3.2-20180524-all.ttf': {'path': 'static/fonts/D2Coding-Ver1.3.2-20180524-all.ttf'},
+    'extra/googlee0d7505564fd3417.html': {'path': 'googlee0d7505564fd3417.html'},
 }
 
 # 사용자 정의 CSS 파일 경로
@@ -58,4 +59,26 @@ SHOW_ARTICLE_AUTHOR = True     # 게시물 상단에 저자 정보 표시
 SHOW_ARTICLE_CATEGORY = True   # 게시물 상단에 카테고리 정보 표시
 SHOW_FULL_ARTICLE = True       # 메인 페이지에 글의 전체 내용 표시 (아니면 요약)
 
+# --- READERS 설정 (이 부분을 새로 추가) ---
+# .html 파일을 콘텐츠로 해석하지 않도록 명시적으로 설정
+READERS = {
+    'html': None,
+}
+
 # RELATIVE_URLS = True # 개발 시 문서 상대 URL 사용 (필요시 주석 해제)
+
+# 사이트맵 생성----------------------------------
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.7,
+        'pages': 0.5,
+        'indexes': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'pages': 'monthly',
+        'indexes': 'daily',
+    }
+}
+# ---------------------------------------------------
