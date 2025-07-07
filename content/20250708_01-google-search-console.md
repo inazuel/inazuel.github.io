@@ -1,6 +1,6 @@
 Title: pelican blog 03. google search console 등록하기
 Date: 2025-07-08 0:55
-Modified: 2025-07-08 0:55
+Modified: 2025-07-08 1:05
 Category: Pelican
 Tags: pelican
 Slug: 20250708_01_google_search_console
@@ -18,17 +18,17 @@ Summary: Pelican Posts
 3. 'sitemap.xml'를 설정해야 한다.
 4. 'robots.txt'를 만들어줘야 한다.
 
-1. 구글 search console에서 우측의 'URL 접두어'를 선택한다. 다음, 'HTML 파일'을 선택한다. 'googlexxxxxxxxxxxxxxxxx.html' 형식의 파일을 다운로드 할 수 있을 것이다. 이것을 xxxxx.github.io\content\extra 폴더 내부로 이동시킨다.
-2. 동일한 xxxxxl.github.io\content\extra 폴더 내부에 'robots.txt' 파일을 만들어주고 아래의 내용을 입력해준다. 만약 해당 폴더가 없다면 만들어주면 된다.
+\\&nbsp;&nbsp;1. 구글 search console에서 우측의 'URL 접두어'를 선택한다. 다음, 'HTML 파일'을 선택한다. 'googlexxxxxxxxxxxxxxxxx.html' 형식의 파일을 다운로드 할 수 있을 것이다. 이것을 xxxxx.github.io\content\extra 폴더 내부로 이동시킨다.
+\\&nbsp;&nbsp;2. 동일한 xxxxxl.github.io\content\extra 폴더 내부에 'robots.txt' 파일을 만들어주고 아래의 내용을 입력해준다. 만약 해당 폴더가 없다면 만들어주면 된다.
 ```
 User-agent: *
 Allow: /
 
-<!--아래를 본인의 볼로그 주소에 맞게 적절히 수정하면 됩니다.-->
+<!--아래를 본인의 블로그 주소에 맞게 적절히 수정하면 됩니다.-->
 Sitemap: https://xxxxx.github.io/sitemap.xml 
 ```
 
-3. root에 위치해있는 pelicanconf.py 를 편집해줘야 한다. pelicanconf.py를 열고 아래와 같은 내용들이 포함되어야 한다.
+\\&nbsp;&nbsp;3. root에 위치해있는 pelicanconf.py 를 편집해줘야 한다. pelicanconf.py를 열고 아래와 같은 내용들이 포함되어야 한다.
 
 3.1.  STATIC_PATHS를 찾아 아래와 같이 되어있는지 확인한다. 만약 STATIC_PATHS이 없다면 아래와 같이 추가해주는 것이 좋다. 구글 search console 등록을 하기때문에 다른 것은 없더라도 extra 는 반드시 포함되어있어야 한다.
 ```
@@ -88,7 +88,7 @@ SITEMAP = {
 ```
 <br>
 
-4. 이제 남은것은 cmd에서 아래의 명령어를 실행해준다. 그 다음은 구글 search console에서 내용을 이어서 해주면 된다. 이 부분은 개인의 상황, 설정 등에 따라 달라질 수 있으니 각자 적절하게 바꿔주면 된다. 
+\\&nbsp;&nbsp;4. 이제 남은것은 cmd에서 아래의 명령어를 실행해준다. 그 다음은 구글 search console에서 내용을 이어서 해주면 된다. 이 부분은 개인의 상황, 설정 등에 따라 달라질 수 있으니 각자 적절하게 바꿔주면 된다. 
 ```
 rmdir /s /q output
 git add .
