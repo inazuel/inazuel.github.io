@@ -12,9 +12,11 @@ Summary: Pelican Posts
 
 &nbsp;&nbsp;그렇다고 하여 장점만 있는 것은 아니다. 일단 태블릿에서는 코랩 파일을 작성하는 데 불편함이 존재한다. 웹에서 구글 드라이브에 접속하면 무조건 앱이 실행된다. 그러나 앱에서는 새 주피터 노트북을 만들고 수정할 수 없다. 그리고 만들어져 있는 파일을 열더라도 웹브라우저로 연결되어 열린다. 즉, 모바일 환경에서는 불편함이 존재한다.
 
-&nbsp;&nbsp;글을 작성하는 도구와 그 도구에 따라서는 공간상의 제약이 사라지는 점, 그리고 글을 작성하기에 비교적 편하다는 장점 때문에 코랩의 주피터 노트북을 선택하였다. 이것을 사용하는 방법은 간단하다. 코랩에는 nnbconver가 설치되어 있는 것을 https://colab.research.google.com/notebooks/relnotes.ipynb 에서 확인할 수 있었다. 2023-03-10 일자로 nbconvert 5.6.1 -> 6.5.4로 업데이트되었다고 나와 있다. 이것을 사용하는 방법 https://nbconvert.readthedocs.io/en/latest/usage.html#convert-notebook에서 확인할 수 있다.
+&nbsp;&nbsp;글을 작성하는 도구와 그 도구에 따라서는 공간상의 제약이 사라지는 점, 그리고 글을 작성하기에 비교적 편하다는 장점 때문에 코랩의 주피터 노트북을 선택하였다. 이것을 사용하는 방법은 간단하다. 코랩에는 nnbconver가 설치되어 있는 것을 <a href="https://colab.research.google.com/notebooks/relnotes.ipynb" target="_blank">https://colab.research.google.com/notebooks/relnotes.ipynb</a>에서 확인할 수 있었다. 2023-03-10 일자로 nbconvert 5.6.1 -> 6.5.4로 업데이트되었다고 나와 있다.
 
-&nbsp;&nbsp;나의 경우는 https://colab.google 에서 New Notebook을 클릭했더니 구글 드라이브 내에 Calab Noteboos 라는 폴더가 자동으로 생성되었다. 그 내부에 github_blog_post라는 폴더를 생성했다. 앞으로 주피터 노트북으로 작성되는 내용은 github_blog_post 내부에 저장될 것이다. 그다음 필요한 것은 아래의 명령어를 사용해서 구글 드라이브를 마운트 해주면 된다.
+&nbsp;&nbsp;나의 경우는 <a href="https://colab.google" target="_blank">https://colab.google</a> 에서 New Notebook을 클릭했더니 구글 드라이브 내에 Calab Noteboos 라는 폴더가 자동으로 생성되었다. 그 내부에 github_blog_post라는 폴더를 생성했다. 앞으로 주피터 노트북으로 작성되는 내용은 github_blog_post 내부에 저장할 것이고 이후의 명령어로 만들어진 md 파일도 이와 동일한 폴더 내에 저장될 것이다
+
+&nbsp;&nbsp;코랩 노트북으로 글을 작성하였다면 아래의 명령어를 실행시킨다. 그리고 나오는 내용들에 대해 동의를 해야 구글 드라이브에 마운트가 가능하다.
 
 
 ```python
@@ -22,20 +24,13 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-    Mounted at /content/drive
-
-
-&nbsp;&nbsp;이것으로 마운트 되면 https://nbconvert.readthedocs.io/en/latest/usage.html을 참조해서 아래의 명령어를 사용하여 마크다운으로 변경해 주면 된다. md이외에도 html이나 그 외의 여러 종류의 변환을 제공하고 있음을 알 수 있다.
+&nbsp;&nbsp;위의 명령어를 실행하고 <a href="https://nbconvert.readthedocs.io/en/latest/usage.html" target="_blank">https://nbconvert.readthedocs.io/en/latest/usage.html</a>을 참조해서 아래의 명령어를 사용하여 마크다운으로 변경해 주면 된다. md이외에도 html이나 그 외의 여러 종류의 변환을 제공하고 있음을 알 수 있다.
 
 
 ```python
 !jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/github_blog_post/test-blog-post.ipynb"
 #[------------필수 구간----------------------------------]/[파일 위치에 따라 달라질 수 있음]/[--파일명 맟 확장자명---]
 ```
-
-    [NbConvertApp] Converting notebook /content/drive/MyDrive/Colab Notebooks/blog_post/test-blog-post.ipynb to markdown
-    [NbConvertApp] Writing 20 bytes to /content/drive/MyDrive/Colab Notebooks/blog_post/test-blog-post.md
-
 
 &nbsp;&nbsp;  !jupyter nbconvert --to [원하는 변환 포맷] "/content/drive/MyDrive/디렉토리/파일명.ipynb" 의 구조인 것을 알 수 있을 것이다. 이렇게 복잡한 구조인 것은 구글 드라이브를 사용하기 때문이지 개인 PC에서 한다면 경로를 저렇게까지 할 필요는 없을 것이다. 문제없이 실행되었다면 blog_post 폴더 내부에 test-blog-post.md라는 파일이 생성되었을 것이다.
 
@@ -69,5 +64,5 @@ notebook_filename = "20250709_01_google_Colab_notebook_post.ipynb"
 ```
 
     [NbConvertApp] Converting notebook /content/drive/MyDrive/Colab Notebooks/github_blog_post/20250709_01_google_Colab_notebook_post.ipynb to markdown
-    [NbConvertApp] Writing 3240 bytes to /content/drive/MyDrive/Colab Notebooks/github_blog_post/20250709_01_google_Colab_notebook_post.md
+    [NbConvertApp] Writing 3589 bytes to /content/drive/MyDrive/Colab Notebooks/github_blog_post/20250709_01_google_Colab_notebook_post.md
 
