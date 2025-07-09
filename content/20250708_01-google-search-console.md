@@ -9,7 +9,6 @@ Summary: Pelican Posts
 
 &nbsp;&nbsp;이번에는 구글 search console에 내 블로그를 등록했다. 다만 문제가 있다면, 내가 사용하는 것은 pelican이고 지킬(Jekyll) 에 비하면 그 정보가 너무 적었다. 정확히는 적다고 느꼈다. 그 원인은 나는 웹이나 프로그래밍에 대해서 아는 바가 없기때문다. 공식 문서를 읽더라도 이해하기에 어려움이 있었기에 ai (google gemini)를 사용해서 구글 search console 에 내 블로그를 등록했다. 지금은 심사기간이고, 만약 여러분이 이 글을 읽고 있다면 이 방법은 성공한 것이라고 할 수 있다.<br>
 
-**플러그인을 설치하는 방법도 있다고 합니다. 제가 한 방법이 더 어려울 수도 있으니 플러그인을 사용하는 방법을 찾아보시는 것도 좋으리라 생각합니다.**<br>
 
 [Github-Blog-검색창-노출시키기](https://velog.io/@eona1301/Github-Blog-%EA%B2%80%EC%83%89%EC%B0%BD-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0)를 참고하였다. 이 글에서 알 수 있는 것은 아래와 같다.<br>
 
@@ -46,7 +45,7 @@ EXTRA_PATH_METADATA = {
 }
 ```
 
-&nbsp;&nbsp;이 부분은 추가적인 설명이 필요한데, D2Coding-Ver1.3.2-20180524-all.ttf 라는 폰트를 별도로 추가했기 때문에 이와같은 구조가 된 것이기때문에 일반적인 상황이라면, font 부분은 제거해주는 것이 좋을 것이다. robots.txt 부분과  'extra/google***************.html': {'path': 'google***************.html' 부분이 중요하다. 이 부분을 앞에서 다운받은 html 파일의 이름과 동일하게 바꾸고 추가해주면 된다.<br>
+&nbsp;&nbsp;이 부분은 추가적인 설명이 필요한데, D2Coding-Ver1.3.2-20180524-all.ttf 라는 폰트를 별도로 추가했기 때문에 이와같은 구조가 된 것이기때문에 일반적인 상황이라면, font 부분은 제거해주는 것이 좋을 것이다. robots.txt 부분과  'extra/googlexxxxxxxxxxxxxxxxx.html': {'path': 'googlexxxxxxxxxxxxxxxxx.html' 부분이 중요하다. 이 부분을 앞에서 다운받은 html 파일의 이름과 동일하게 바꾸고 추가해주면 된다.<br>
 
 &nbsp;&nbsp;3.3. 그 후 pelicanconf.py에 아래의 내용을 추가해준다. 이 내용의 위치는 크게 상관 없는 거 같다. 나는 pelicanconf.py 내 하단 부분에 추가했다.
 
@@ -111,4 +110,4 @@ https://xxxxx.github.io/robots.txt
 sitemap.xml
 ```
 <br>
-&nbsp;&nbsp;이것으로 구글 search console 추가는 완료되었고, 구글 search console 블로그가 등록되기를 기다리기만 하면 된다. 가능하신 분들은 플러그인을 사용해보는 것도 좋을 것이다.
+&nbsp;&nbsp;이것으로 구글 search console 추가는 완료되었고, 구글 search console 블로그가 등록되기를 기다리기만 하면 된다. 

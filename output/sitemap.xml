@@ -5,36 +5,43 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://inazuel.github.io/</loc>
-<lastmod>2025-07-07T22:49:55-00:00</lastmod>
+<lastmod>2025-07-09T18:29:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/tags.html</loc>
-<lastmod>2025-07-07T22:49:55-00:00</lastmod>
+<lastmod>2025-07-09T18:29:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/categories.html</loc>
-<lastmod>2025-07-07T22:49:55-00:00</lastmod>
+<lastmod>2025-07-09T18:29:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/authors.html</loc>
-<lastmod>2025-07-07T22:49:55-00:00</lastmod>
+<lastmod>2025-07-09T18:29:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/archives.html</loc>
-<lastmod>2025-07-07T22:49:55-00:00</lastmod>
+<lastmod>2025-07-09T18:29:22-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://inazuel.github.io/20250708_01_google_search_console.html</loc>
+<lastmod>2025-07-08T01:05:00-09:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -42,39 +49,39 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>https://inazuel.github.io/20250704_02_Adjust line-height for blog post content.html</loc>
 <lastmod>2025-07-04T20:00:00-09:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/20250704_01_fontchange.html</loc>
 <lastmod>2025-07-04T00:35:00-09:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/create pelican site.html</loc>
 <lastmod>2025-07-03T18:25:00-09:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://inazuel.github.io/category/pelican.html</loc>
-<lastmod>2025-07-04T20:00:00-09:00</lastmod>
-<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://inazuel.github.io/tag/python.html</loc>
-<lastmod>2025-07-04T20:00:00-09:00</lastmod>
+<loc>https://inazuel.github.io/category/pelican.html</loc>
+<lastmod>2025-07-08T01:05:00-09:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://inazuel.github.io/tag/pelican.html</loc>
+<lastmod>2025-07-08T01:05:00-09:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://inazuel.github.io/tag/python.html</loc>
 <lastmod>2025-07-04T20:00:00-09:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://inazuel.github.io/author/inazuel.html</loc>
-<lastmod>2025-07-04T20:00:00-09:00</lastmod>
+<lastmod>2025-07-08T01:05:00-09:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
