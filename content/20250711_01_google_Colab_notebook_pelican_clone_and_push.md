@@ -27,6 +27,27 @@ drive.mount('/gdrive')
 !git clone https://github.com/inazuel/inazuel.github.io.git
 ```
 
+##2. pelican 설치
+
+&nbsp;&nbsp;  pelican 을 설치해야 한다. 이번에 설치되었다고 하더라도 런타임을 재설정하거나 코랩 노트북을 닫았다 열면 다시 실행하여 설치해야 하므로 push를 할 때마다 반복적으로 설치를 해야 한다.
+
+
+```python
+!pip install pelican
+```
+
+&nbsp;&nbsp;또한 Gemini는 아래와 같은 오류가 발생한다고 해서 pelican 명령어를 사용하지 못하는 것은 아니라고 한다. 하지만 이것을 설치하고 나서 '!git add .' 가 원활하게 되는 거 같다.
+```
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+ipython 7.34.0 requires jedi>=0.16, which is not installed.
+```
+&nbsp;&nbsp;이것은 jedi 버전이 낮아서 나타나는 현상이다. 2025년 7월 11일 자 기준으로 jedi-0.19.2 버전이 설치된다.
+
+
+```python
+!pip install jedi
+```
+
 ## 2. 변수 설정
 
 &nbsp;&nbsp;편의를 위해서 아래의 변수를 설정한다. 변수로 설정 하면 나중에 수정할 때 편하고 실수가 줄어들 수 있을것이다. 각자의 상황에 맞게 변경하고 실행한다.

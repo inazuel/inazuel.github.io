@@ -124,6 +124,20 @@ record of my life            </a>
 <span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">inazuel</span><span class="o">/</span><span class="n">inazuel</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span>
 </code></pre></div>
 
+<h2>2. pelican 설치</h2>
+<p>&nbsp;&nbsp;  pelican 을 설치해야 한다. 이번에 설치되었다고 하더라도 런타임을 재설정하거나 코랩 노트북을 닫았다 열면 다시 실행하여 설치해야 하므로 push를 할 때마다 반복적으로 설치를 해야 한다.</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+</code></pre></div>
+
+<p>&nbsp;&nbsp;또한 Gemini는 아래와 같은 오류가 발생한다고 해서 pelican 명령어를 사용하지 못하는 것은 아니라고 한다. 하지만 이것을 설치하고 나서 '!git add .' 가 원활하게 되는 거 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ERROR</span><span class="o">:</span><span class="w"> </span><span class="n">pip</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">dependency</span><span class="w"> </span><span class="n">resolver</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">currently</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">installed</span><span class="o">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">behaviour</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">dependency</span><span class="w"> </span><span class="n">conflicts</span><span class="o">.</span>
+<span class="n">ipython</span><span class="w"> </span><span class="mf">7.34</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="n">requires</span><span class="w"> </span><span class="n">jedi</span><span class="o">&gt;=</span><span class="mf">0.16</span><span class="o">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">installed</span><span class="o">.</span>
+</code></pre></div>
+
+<p>&nbsp;&nbsp;이것은 jedi 버전이 낮아서 나타나는 현상이다. 2025년 7월 11일 자 기준으로 jedi-0.19.2 버전이 설치된다.</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">jedi</span>
+</code></pre></div>
+
 <h2>2. 변수 설정</h2>
 <p>&nbsp;&nbsp;편의를 위해서 아래의 변수를 설정한다. 변수로 설정 하면 나중에 수정할 때 편하고 실수가 줄어들 수 있을것이다. 각자의 상황에 맞게 변경하고 실행한다.</p>
 <div class="highlight"><pre><span></span><code><span class="n">GIT_USERNAME</span> <span class="o">=</span> <span class="s2">&quot;inazuel&quot;</span>  <span class="c1"># 깃허브 유저네임</span>
