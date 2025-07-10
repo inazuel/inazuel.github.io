@@ -1,6 +1,6 @@
 Title: pelican blog 04. 구글 코랩 노트북에서 블로그 글 쓰기
-Date: 2025-09-09 18:50
-Modified: 2025-09-09 18:50
+Date: 2025-07-09 18:50
+Modified: 2025-07-09 18:50
 Category: Pelican
 Tags: python, pelican
 Slug: 20250709_01_google_Colab_notebook_post
@@ -29,10 +29,9 @@ drive.mount('/content/drive')
 
 ```python
 !jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/github_blog_post/test-blog-post.ipynb"
-#[------------필수 구간----------------------------------]/[파일 위치에 따라 달라질 수 있음]/[--파일명 맟 확장자명---]
 ```
 
-&nbsp;&nbsp;  !jupyter nbconvert --to [원하는 변환 포맷] "/content/drive/MyDrive/디렉토리/파일명.ipynb" 의 구조인 것을 알 수 있을 것이다. 이렇게 복잡한 구조인 것은 구글 드라이브를 사용하기 때문이지 개인 PC에서 한다면 경로를 저렇게까지 할 필요는 없을 것이다. 문제없이 실행되었다면 blog_post 폴더 내부에 test-blog-post.md라는 파일이 생성되었을 것이다.
+&nbsp;&nbsp;  !jupyter nbconvert --to [원하는 변환 포맷] "/content/drive/MyDrive/디렉토리/파일명.ipynb" 의 구조인 것을 알 수 있을 것이다. 이렇게 복잡한 구조인 것은 구글 드라이브를 사용하기 때문이지 개인 PC에서 한다면 경로를 저렇게까지 할 필요는 없을 것이다. 문제없이 실행되었다면 github_blog_post 폴더 내부에 test-blog-post.md라는 파일이 생성되었을 것이다.
 
 &nbsp;&nbsp;지금으로써는 구글 드라이브와 깃허브가 연동되어 있지 않아서 만들어진 것을 내려받아 PC에서 직접 커밋을 해줘야 한다는 불편함이 존재한다. 그리고 주의할 점이었다. 앞에서 sitemap.xml을 추가했기 때문에 커밋을 할 때의 명령어는 아래와 같이 입력해야 한다.
 ```
@@ -43,26 +42,3 @@ git push origin master
 ```
 
 &nbsp;&nbsp;이것으로, 코랩으로 포스트 작성 및 md파일로 변환하기는 완료되었다. 이제는 외부에서 미리 블로그 글을 작성해 둘 수 있게 되었고, 작성 방식도 조금은 편해졌으며 필요에 따라서는 파이썬 코딩 및 실행 결과물도 출력할 수 있게 되었다.
-
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-    Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
-
-
-
-```python
-notebook_filename = "20250709_01_google_Colab_notebook_post.ipynb"
-```
-
-
-```python
-!jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/github_blog_post/{notebook_filename}"
-```
-
-    [NbConvertApp] Converting notebook /content/drive/MyDrive/Colab Notebooks/github_blog_post/20250709_01_google_Colab_notebook_post.ipynb to markdown
-    [NbConvertApp] Writing 3589 bytes to /content/drive/MyDrive/Colab Notebooks/github_blog_post/20250709_01_google_Colab_notebook_post.md
-
