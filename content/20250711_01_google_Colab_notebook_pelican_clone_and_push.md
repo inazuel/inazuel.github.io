@@ -1,8 +1,8 @@
 Title: pelican blog 05. 구글 코랩 노트북 pelican clone과 push 하기
 Date: 2025-07-11 0:50
 Modified: 2025-07-11 0:50
-Category: python, Pelican, colab
-Tags: python, pelican
+Category: Pelican
+Tags: python, pelican, colab
 Slug: 20250711_01_google_Colab_notebook_pelican_clone_and_push
 Authors: inazuel
 Summary: Pelican Posts
