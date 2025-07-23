@@ -73,7 +73,7 @@ shutil.copy(source_file, destination_folder)
 GIT_USERNAME = "xxxxxxx"  # 깃허브 유저네임
 IDGIT_EMAIL = "xxxxxxx@xxxxxxx.com" # 깃허브 이메일
 GITHUB_PAT = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # 깃허브에서 생성한 PAT
-DRIVE_REPO_PATH = "/gdrive/MyDrive/Colab Notebooks/xxxxxxx.github.io" # !git clone 한 리포지토리의 root 경로
+DRIVE_REPO_PATH = "/content/drive/MyDrive/Colab Notebooks/xxxxxxx.github.io" # !git clone 한 리포지토리의 root 경로
 GITHUB_REPO_URL = "https://github.com/xxxxxxx/xxxxxxx.github.io.git"  # !git clone 한 리포지토리의 URL
 PUSH_URL =  GITHUB_REPO_URL.replace("https://", f"https://{GIT_USERNAME}:{GITHUB_PAT}@")  # !git push 리포지토리의 URL
 BRANCH_NAME = "master" # 설정에 따라 main 또는 master
@@ -100,5 +100,5 @@ commit_name = input('커밋 메시지를 입력하시오 :')
 ```python
 !git add content
 !git commit -m "New post: [{commit_name}]"
-!git push origin master
+!git push "{PUSH_URL}" "{BRANCH_NAME}"
 ```
