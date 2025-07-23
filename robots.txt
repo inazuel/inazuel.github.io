@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inazuel.github.io/sitemap.xml

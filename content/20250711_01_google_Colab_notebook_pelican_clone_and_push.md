@@ -19,43 +19,50 @@ from google.colab import drive
 drive.mount('/gdrive')
 ```
 
+    Mounted at /gdrive
+
+
 &nbsp;&nbsp;다음에 입력하는 cd 명령어는 때에 따라서는 생략하고 바로 clone 명령어를 실행해도 된다. 이 경우에는 명령어를 실행하는 코랩 노트북이 있는 위치에 inazuel.github.io 폴더가 자동으로 생성된다. 즉, /Colab Notebooks/clone-and-push.ipynb 에서 clone 명령어를 실행하면 자동으로 /Colab Notebooks/xxxxxx.github.io/ 폴더가 생성된다. 그러니 미리 내가 원하는 위치에 코랩 노트북을 만들고 명령어를 실행하면 생략해도 괜찮다.
 
 
 ```python
-%cd '/gdrive/MyDrive/Colab Notebooks' # 명령어를 실행하는 코랩 노트북이 해당 위치에 있으면 실행하지 않아도 된다.
+# 명령어를 실행하는 코랩 노트북이 해당 위치에 있으면 실행하지 않아도 된다.
+%cd '/gdrive/MyDrive/Colab Notebooks'
 !git clone https://github.com/inazuel/inazuel.github.io.git
 ```
 
-##2. pelican 설치
+    /gdrive/MyDrive/Colab Notebooks
 
-&nbsp;&nbsp;  pelican 을 설치해야 한다. 이번에 설치되었다고 하더라도 런타임을 재설정하거나 코랩 노트북을 닫았다 열면 다시 실행하여 설치해야 하므로 push를 할 때마다 반복적으로 설치를 해야 한다.
+
+##2. pelican 설치 (선택사항)
+
+&nbsp;&nbsp; 필요하다면 pelican 을 설치한다. 그러나 이러한 것은 일반적인 환경(노트북, 데스크탑 등)에서 하는 것이 좋다. 이번에 설치되었다고 하더라도 런타임을 재설정하거나 코랩 노트북을 닫았다 열면 다시 실행하여 설치해야 하므로 push를 할 때마다 반복적으로 설치를 해야 한다. 그리고** 사실상 yml 파일을 설정했기때문에 불필요한 부분**이다.
 
 
 ```python
 !pip install pelican
 ```
 
-&nbsp;&nbsp;또한 Gemini는 아래와 같은 오류가 발생한다고 해서 pelican 명령어를 사용하지 못하는 것은 아니라고 한다. 하지만 이것을 설치하고 나서 '!git add .' 가 원활하게 되는 거 같다.
+&nbsp;&nbsp;또한 아래와 같은 오류가 발생한다고 해서 pelican 명령어를 사용하지 못하는 것은 아니다.
 ```
 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
 ipython 7.34.0 requires jedi>=0.16, which is not installed.
 ```
-&nbsp;&nbsp;이것은 jedi 버전이 낮아서 나타나는 현상이다. 2025년 7월 11일 자 기준으로 jedi-0.19.2 버전이 설치된다.
+&nbsp;&nbsp;pelican과 마찬가지로 필요에 따라서 설치 유무를 선택한다.
 
 
 ```python
 !pip install jedi
 ```
 
-## 2. 변수 설정
+## 3. 변수 설정
 
 &nbsp;&nbsp;편의를 위해서 아래의 변수를 설정한다. 변수로 설정 하면 나중에 수정할 때 편하고 실수가 줄어들 수 있을것이다. 각자의 상황에 맞게 변경하고 실행한다.
 
 
 ```python
-GIT_USERNAME = "inazuel"  # 깃허브 유저네임
-IDGIT_EMAIL = "inazuel@xxxxxxx.com" # 깃허브 이메일
+GIT_USERNAME = "inazuel" # 깃허브 유저네임
+GIT_EMAIL = "inazuel@gmail.com" # 깃허브 이메일
 GITHUB_PAT = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # 깃허브에서 생성한 PAT
 DRIVE_REPO_PATH = "/gdrive/MyDrive/Colab Notebooks/inazuel.github.io" # !git clone 한 리포지토리의 root 경로
 GITHUB_REPO_URL = "https://github.com/inazuel/inazuel.github.io.git"  # !git clone 한 리포지토리의 URL
@@ -79,8 +86,8 @@ BRANCH_NAME = "master" # 설정에 따라 main 또는 master
 
 ```python
 # commit & push
-!pelican content -s pelicanconf.py
-!git add .
+# !pelican content -s pelicanconf.py #필요한 경우에만 사용
+!git add content
 !git commit -m "Update blog content & add new post: [여기에 실제 포스트 제목을 입력하세요]"
 !git push "{PUSH_URL}" "{BRANCH_NAME}"
 ```

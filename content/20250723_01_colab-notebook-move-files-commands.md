@@ -17,6 +17,8 @@ from google.colab import drive
 drive.mount('/gdrive')
 ```
 
+<br>
+
 ## 2. 파일명 변수 지정
 
 &nbsp;&nbsp; 편의를 위해서 파일명을 변수로 지정해 줬다.
@@ -26,6 +28,8 @@ drive.mount('/gdrive')
 # 파일명 입력
 a = input('파일명을 입력하시오 :')
 ```
+
+<br>
 
 ## 3. 백업을 위해 파일 이동
 
@@ -43,6 +47,8 @@ destination_path = '/content/drive/MyDrive/Colab Notebooks/github_blog_post'
 shutil.move(source_path, destination_path)
 ```
 
+<br>
+
 ## 4. nbconvert 로 ipynb에서 md 파일로 변환
 
 &nbsp;&nbsp; 자세히 알고 싶다면 <a href="https://inazuel.github.io/20250709_01_google_Colab_notebook_post.html" target="_blank">pelican blog 04. 구글 코랩 노트북에서 블로그 글 쓰기</a> 또는 <a href="https://nbconvert.readthedocs.io/en/latest/usage.html" target="_blank">https://nbconvert.readthedocs.io/en/latest/usage.html</a>를 참고하면 된다. 또한 구글 코랩에서는 2025년 7월 22일 기준으로 6.5.4 버전이 설치되어있다.
@@ -53,7 +59,11 @@ shutil.move(source_path, destination_path)
 !jupyter nbconvert --to markdown "/content/drive/MyDrive/Colab Notebooks/github_blog_post/{a}.ipynb"
 ```
 
+<br>
+
 ## 5. 특정 경로로 md 파일 복사
+
+
 
 &nbsp;&nbsp;구글 드라이브의 GUI 환경에서 직접 해당 파일을 이동시키는 게 더 편하다면 생략 가능하다.
 
@@ -66,7 +76,10 @@ destination_folder ='/content/drive/MyDrive/Colab Notebooks/xxxxxxx.github.io/co
 shutil.copy(source_file, destination_folder)
 ```
 
-&nbsp;&nbsp;마지막으로 아래의 변수설정 및 명령어를 참고하여 커밋을 한다.
+<br>
+
+## 6. git add, commit, push
+
 
 
 ```python
@@ -93,6 +106,7 @@ BRANCH_NAME = "master" # 설정에 따라 main 또는 master
 
 
 ```python
+# commit_name 변수
 commit_name = input('커밋 메시지를 입력하시오 :')
 ```
 
