@@ -124,12 +124,14 @@ record of my life            </a>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/gdrive&#39;</span><span class="p">)</span>
 </code></pre></div>
 
+<p><br></p>
 <h2>2. 파일명 변수 지정</h2>
 <p>&nbsp;&nbsp; 편의를 위해서 파일명을 변수로 지정해 줬다.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 파일명 입력</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;파일명을 입력하시오 :&#39;</span><span class="p">)</span>
 </code></pre></div>
 
+<p><br></p>
 <h2>3. 백업을 위해 파일 이동</h2>
 <p>&nbsp;&nbsp; 백업을 위해 이러한 방식을 선택했다. 하지만 다른 방식이 편하다면 생략 가능하다. (나의 경우는 /content/drive/MyDrive/Colab Notebooks/ 내부에 포스트 할 파일을 먼저 만들고 1차로 한번 읽어본 다음 /github_blog_post/ 로 {a}.ipynb 를 이동시켜서 백업을 해놓기 때문에 이런 방식이 되는데 개인의 취향에 따라서 이 과정은 제외할 수도 있다.)</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 파일 이동하기</span>
@@ -142,12 +144,14 @@ record of my life            </a>
 <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">source_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">)</span>
 </code></pre></div>
 
+<p><br></p>
 <h2>4. nbconvert 로 ipynb에서 md 파일로 변환</h2>
 <p>&nbsp;&nbsp; 자세히 알고 싶다면 <a href="https://inazuel.github.io/20250709_01_google_Colab_notebook_post.html" target="_blank">pelican blog 04. 구글 코랩 노트북에서 블로그 글 쓰기</a> 또는 <a href="https://nbconvert.readthedocs.io/en/latest/usage.html" target="_blank">https://nbconvert.readthedocs.io/en/latest/usage.html</a>를 참고하면 된다. 또한 구글 코랩에서는 2025년 7월 22일 기준으로 6.5.4 버전이 설치되어있다.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># ipynb 를 md로 변환</span>
 <span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="s2">&quot;/content/drive/MyDrive/Colab Notebooks/github_blog_post/</span><span class="si">{a}</span><span class="s2">.ipynb&quot;</span>
 </code></pre></div>
 
+<p><br></p>
 <h2>5. 특정 경로로 md 파일 복사</h2>
 <p>&nbsp;&nbsp;구글 드라이브의 GUI 환경에서 직접 해당 파일을 이동시키는 게 더 편하다면 생략 가능하다.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># github_blog_post/{a}.md 파일을 inazuel.github.io/content 로 복사</span>
@@ -157,7 +161,8 @@ record of my life            </a>
 <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">source_file</span><span class="p">,</span> <span class="n">destination_folder</span><span class="p">)</span>
 </code></pre></div>
 
-<p>&nbsp;&nbsp;마지막으로 아래의 변수설정 및 명령어를 참고하여 커밋을 한다.</p>
+<p><br></p>
+<h2>6. git add, commit, push</h2>
 <div class="highlight"><pre><span></span><code><span class="n">GIT_USERNAME</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxx&quot;</span>  <span class="c1"># 깃허브 유저네임</span>
 <span class="n">IDGIT_EMAIL</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxx@xxxxxxx.com&quot;</span> <span class="c1"># 깃허브 이메일</span>
 <span class="n">GITHUB_PAT</span> <span class="o">=</span> <span class="s2">&quot;ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span> <span class="c1"># 깃허브에서 생성한 PAT</span>
@@ -175,7 +180,8 @@ record of my life            </a>
 <span class="o">%</span><span class="n">cd</span> <span class="s2">&quot;</span><span class="si">{DRIVE_REPO_PATH}</span><span class="s2">&quot;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">commit_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;커밋 메시지를 입력하시오 :&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># commit_name 변수</span>
+<span class="n">commit_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;커밋 메시지를 입력하시오 :&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">git</span> <span class="n">add</span> <span class="n">content</span>

@@ -5,12 +5,14 @@
 &lt;span class="n"&gt;drive&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/gdrive&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;2. 파일명 변수 지정&lt;/h2&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp; 편의를 위해서 파일명을 변수로 지정해 줬다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 파일명 입력&lt;/span&gt;
 &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;파일명을 입력하시오 :&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;3. 백업을 위해 파일 이동&lt;/h2&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp; 백업을 위해 이러한 방식을 선택했다. 하지만 다른 방식이 편하다면 생략 가능하다. (나의 경우는 /content/drive/MyDrive/Colab Notebooks/ 내부에 포스트 할 파일을 먼저 만들고 1차로 한번 읽어본 다음 /github_blog_post/ 로 {a}.ipynb 를 이동시켜서 백업을 해놓기 때문에 이런 방식이 되는데 개인의 취향에 따라서 이 과정은 제외할 수도 있다.)&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 파일 이동하기&lt;/span&gt;
@@ -23,12 +25,14 @@
 &lt;span class="n"&gt;shutil&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;destination_path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;4. nbconvert 로 ipynb에서 md 파일로 변환&lt;/h2&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp; 자세히 알고 싶다면 &lt;a href="https://inazuel.github.io/20250709_01_google_Colab_notebook_post.html" target="_blank"&gt;pelican blog 04. 구글 코랩 노트북에서 블로그 글 쓰기&lt;/a&gt; 또는 &lt;a href="https://nbconvert.readthedocs.io/en/latest/usage.html" target="_blank"&gt;https://nbconvert.readthedocs.io/en/latest/usage.html&lt;/a&gt;를 참고하면 된다. 또한 구글 코랩에서는 2025년 7월 22일 기준으로 6.5.4 버전이 설치되어있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# ipynb 를 md로 변환&lt;/span&gt;
 &lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;nbconvert&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/content/drive/MyDrive/Colab Notebooks/github_blog_post/&lt;/span&gt;&lt;span class="si"&gt;{a}&lt;/span&gt;&lt;span class="s2"&gt;.ipynb&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;5. 특정 경로로 md 파일 복사&lt;/h2&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;구글 드라이브의 GUI 환경에서 직접 해당 파일을 이동시키는 게 더 편하다면 생략 가능하다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# github_blog_post/{a}.md 파일을 inazuel.github.io/content 로 복사&lt;/span&gt;
@@ -38,7 +42,8 @@
 &lt;span class="n"&gt;shutil&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source_file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;destination_folder&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&amp;nbsp;마지막으로 아래의 변수설정 및 명령어를 참고하여 커밋을 한다.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;6. git add, commit, push&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;GIT_USERNAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;xxxxxxx&amp;quot;&lt;/span&gt;  &lt;span class="c1"&gt;# 깃허브 유저네임&lt;/span&gt;
 &lt;span class="n"&gt;IDGIT_EMAIL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;xxxxxxx@xxxxxxx.com&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# 깃허브 이메일&lt;/span&gt;
 &lt;span class="n"&gt;GITHUB_PAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# 깃허브에서 생성한 PAT&lt;/span&gt;
@@ -56,7 +61,8 @@
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{DRIVE_REPO_PATH}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;commit_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;커밋 메시지를 입력하시오 :&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# commit_name 변수&lt;/span&gt;
+&lt;span class="n"&gt;commit_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;커밋 메시지를 입력하시오 :&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;
@@ -69,29 +75,36 @@
 &lt;span class="n"&gt;drive&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/gdrive&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Mounted at /gdrive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&amp;nbsp;&amp;nbsp;다음에 입력하는 cd 명령어는 때에 따라서는 생략하고 바로 clone 명령어를 실행해도 된다. 이 경우에는 명령어를 실행하는 코랩 노트북이 있는 위치에 inazuel.github.io 폴더가 자동으로 생성된다. 즉, /Colab Notebooks/clone-and-push.ipynb 에서 clone 명령어를 실행하면 자동으로 /Colab Notebooks/xxxxxx.github.io/ 폴더가 생성된다. 그러니 미리 내가 원하는 위치에 코랩 노트북을 만들고 명령어를 실행하면 생략해도 괜찮다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/gdrive/MyDrive/Colab Notebooks&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 명령어를 실행하는 코랩 노트북이 해당 위치에 있으면 실행하지 않아도 된다.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 명령어를 실행하는 코랩 노트북이 해당 위치에 있으면 실행하지 않아도 된다.&lt;/span&gt;
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/gdrive/MyDrive/Colab Notebooks&amp;#39;&lt;/span&gt;
 &lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;inazuel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;inazuel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2&gt;2. pelican 설치&lt;/h2&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;  pelican 을 설치해야 한다. 이번에 설치되었다고 하더라도 런타임을 재설정하거나 코랩 노트북을 닫았다 열면 다시 실행하여 설치해야 하므로 push를 할 때마다 반복적으로 설치를 해야 한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;/gdrive/MyDrive/Colab Notebooks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;2. pelican 설치 (선택사항)&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp; 필요하다면 pelican 을 설치한다. 그러나 이러한 것은 일반적인 환경(노트북, 데스크탑 등)에서 하는 것이 좋다. 이번에 설치되었다고 하더라도 런타임을 재설정하거나 코랩 노트북을 닫았다 열면 다시 실행하여 설치해야 하므로 push를 할 때마다 반복적으로 설치를 해야 한다. 그리고&lt;strong&gt; 사실상 yml 파일을 설정했기때문에 불필요한 부분&lt;/strong&gt;이다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&amp;nbsp;또한 Gemini는 아래와 같은 오류가 발생한다고 해서 pelican 명령어를 사용하지 못하는 것은 아니라고 한다. 하지만 이것을 설치하고 나서 '!git add .' 가 원활하게 되는 거 같다.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;또한 아래와 같은 오류가 발생한다고 해서 pelican 명령어를 사용하지 못하는 것은 아니다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dependency&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;resolver&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;does&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;currently&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;take&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;into&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;behaviour&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;following&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dependency&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;conflicts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;span class="n"&gt;ipython&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;7.34&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;requires&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.16&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;which&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&amp;nbsp;&amp;nbsp;이것은 jedi 버전이 낮아서 나타나는 현상이다. 2025년 7월 11일 자 기준으로 jedi-0.19.2 버전이 설치된다.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;pelican과 마찬가지로 필요에 따라서 설치 유무를 선택한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;jedi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2&gt;2. 변수 설정&lt;/h2&gt;
+&lt;h2&gt;3. 변수 설정&lt;/h2&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;편의를 위해서 아래의 변수를 설정한다. 변수로 설정 하면 나중에 수정할 때 편하고 실수가 줄어들 수 있을것이다. 각자의 상황에 맞게 변경하고 실행한다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;GIT_USERNAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;inazuel&amp;quot;&lt;/span&gt;  &lt;span class="c1"&gt;# 깃허브 유저네임&lt;/span&gt;
-&lt;span class="n"&gt;IDGIT_EMAIL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;inazuel@xxxxxxx.com&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# 깃허브 이메일&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;GIT_USERNAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;inazuel&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# 깃허브 유저네임&lt;/span&gt;
+&lt;span class="n"&gt;GIT_EMAIL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;inazuel@gmail.com&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# 깃허브 이메일&lt;/span&gt;
 &lt;span class="n"&gt;GITHUB_PAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# 깃허브에서 생성한 PAT&lt;/span&gt;
 &lt;span class="n"&gt;DRIVE_REPO_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/gdrive/MyDrive/Colab Notebooks/inazuel.github.io&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# !git clone 한 리포지토리의 root 경로&lt;/span&gt;
 &lt;span class="n"&gt;GITHUB_REPO_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://github.com/inazuel/inazuel.github.io.git&amp;quot;&lt;/span&gt;  &lt;span class="c1"&gt;# !git clone 한 리포지토리의 URL&lt;/span&gt;
@@ -109,8 +122,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# commit &amp;amp; push&lt;/span&gt;
-&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="c1"&gt;# !pelican content -s pelicanconf.py #필요한 경우에만 사용&lt;/span&gt;
+&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;
 &lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Update blog content &amp;amp; add new post: [여기에 실제 포스트 제목을 입력하세요]&amp;quot;&lt;/span&gt;
 &lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{PUSH_URL}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{BRANCH_NAME}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
