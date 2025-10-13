@@ -12,13 +12,6 @@ jobs:
     runs-on: ubuntu-24.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
-
-    # ----------------------------------------------------
-    # 여기에 권한 설정을 추가합니다. 
-    permissions:
-      contents: write # 필수: 이 토큰이 저장소에 내용을 쓸 수 있도록 허용
-    # ----------------------------------------------------
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
