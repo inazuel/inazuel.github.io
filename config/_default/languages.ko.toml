@@ -2,7 +2,7 @@ disabled = false
 languageCode = "ko"
 languageName = "korean"
 weight = 1
-title = "Stars of wisdom"
+title = "A star of wisdom"
 
 [params]
   displayName = "KO"
