@@ -2,7 +2,7 @@
 title = 'My First Post'
 date = 2025-10-13T07:29:59+09:00
 draft = true
-category = "블로그"
+menus = '블로그'
 +++
 ## Introduction
 
