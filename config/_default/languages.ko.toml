@@ -12,7 +12,14 @@ title = "A star of wisdom"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
-  copyright = "&Copy;, _right?_ :thinking_face:"
+  copyright = "Copy, _right?_ :thinking_face:"
+  # ... 다른 설정들 ...
+  
+  # 저작권 문구를 수정합니다.
+  # Blowfish 테마는 "{year}" 플레이스홀더를 현재 연도로 자동 대체합니다.
+  copyright = "Copyright © 2025–{year} A star of wisdom. All rights reserved."
+  
+  # ... 나머지 설정 ...
 
 # [params.author]
   name = "inazuel"
