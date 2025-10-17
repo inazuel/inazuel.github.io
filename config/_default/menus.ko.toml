@@ -15,20 +15,20 @@
   pageRef = "page"
   weight = 10
 
-[[main]]
-  name = "포스트"
-  pageRef = "posts"
-  weight = 10
+#[[main]]
+#  name = "포스트"
+#  pageRef = "posts"
+#  weight = 10
 
 [[main]]
   name = "포스트-블로그"
-  parent = "Parent"
+  parent = "포스트"
   pageRef = "posts"
   weight = 20
 
 [[main]]
   name = "포스트-라이프로그"
-  parent = "Parent"
+  parent = "포스트"
   pageRef = "posts"
   weight = 20
 
