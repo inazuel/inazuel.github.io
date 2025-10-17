@@ -11,25 +11,26 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "블로그"
-  pageRef = "posts"
+  name = "소개"
+  pageRef = "page"
   weight = 10
 
 [[main]]
   name = "포스트"
+  pageRef = "posts"
   weight = 10
 
-#[[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+[[main]]
+  name = "포스트-블로그"
+  parent = "Parent"
+  pageRef = "posts"
+  weight = 20
 
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+[[main]]
+  name = "포스트-라이프로그"
+  parent = "Parent"
+  pageRef = "posts"
+  weight = 20
 
 #[[subnavigation]]
 #  name = "An interesting topic"
