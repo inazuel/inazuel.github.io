@@ -26,7 +26,7 @@ Only select repositories에서 댓글용으로 만든 repositories를 선택한�
 
 ## 3. utterances 설정
 
-[https://utteranc.es/](https://utteranc.es/) 에서 설정을 해준다. configuration의 Repository의 repo: 부분은 inazuel/blog-comments 를 입력한다. 나머지는 기본값에서 변경해 줄 사항은 없으나 필요에 따라서 theme 부분을 본인이 원하는 것으로 바꿔준다. (제 경우는 icy Dark로 했습니다) 여기까지 진행했다면, Enable Utterances 부분에 그렇다면 아래와 같은 형식으로 코드가 생성된 것을 볼 수 있다.
+[https://utteranc.es/](https://utteranc.es/) 에서 설정을 해준다. configuration의 Repository의 repo: 부분은 inazuel/blog-comments 를 입력한다. 나머지는 기본값에서 변경해 줄 사항은 없으나 필요에 따라서 theme 부분을 본인이 원하는 것으로 바꿔준다. (제 경우는 icy Dark로 했습니다) 여기까지 진행했다면, Enable Utterances 부분에 아래와 같은 형식으로 코드가 생성된 것을 볼 수 있다.
 
 ```
 <script src="https://utteranc.es/client.js"
