@@ -17,6 +17,10 @@ buildFuture = false
 
 enableEmoji = true
 
+# Git 커밋 날짜 자동 기록 설정
+enableGitInfo = true
+
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]

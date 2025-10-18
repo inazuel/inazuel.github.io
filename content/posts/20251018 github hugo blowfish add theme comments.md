@@ -1,15 +1,14 @@
 +++
 title = 'github hugo blowfish theme 댓글 추가하기'
-date = 2025-10-18T00:51:00+09:00
 draft = false
 showComments = true
 +++
 
-# hugo blowfish theme 댓글 기능 추가
+# 개요
 
 github blog를 만들었다. 이전에는 pelican blog를 사용하기 위해 시도해 봤으나 여러 어려움 때문에 포기하고 hugo로 넘어왔다. 향후 기회가 된다면 pelican blog와 hugo의 설치 과정도 기록할 생각이다.
 
-이번에는 댓글 기능 추가를 했다. 사용하는 테마는 blowfish이다. 댓글 기능 서비스 대상으로는 Disqus, Utterances, giscus 가 있었다. 기본적으로 Disqus를 지원한다고 하지만 [https://en.wikipedia.org/wiki/Disqus](https://en.wikipedia.org/wiki/Disqus) 에 의하면 광고와 개인정보 관련 이슈가 있기 때문에 처음부터 고려 사항은 아니었다. giscus를 사용해 보려고 여러모로 시도를 해봤는데 blowfish에서 gisicus를 적용할 수 있는 자료를 찾지 못했다. 결과적으로 utterances를 사용하기로 했다.
+이 포스트에서는 댓글 기능 추가하는 과정을 기록했다. 사용하는 테마는 blowfish이다. 댓글 기능 서비스 대상으로는 Disqus, Utterances, giscus 가 있었다. Hugo에서는 기본적으로 Disqus를 지원한다고 하지만 [https://en.wikipedia.org/wiki/Disqus](https://en.wikipedia.org/wiki/Disqus) 에 의하면 광고와 개인정보 관련 이슈가 있기 때문에 처음부터 고려 사항은 아니었다. giscus를 사용해 보려고 여러모로 시도를 해봤는데 blowfish에서 gisicus를 적용할 수 있는 자료를 찾지 못했다. 그렇기에 utterances를 사용하게 되었다.
 
 ## utterances 사용
 
@@ -27,7 +26,19 @@ Only select repositories에서 댓글용으로 만든 repositories를 선택한�
 
 ## 3. utterances 설정
 
-[https://utteranc.es/](https://utteranc.es/) 에서 설정을 해준다. configuration의 Repository의 repo: 부분은 inazuel/blog-comments 를 입력한다. 나머지는 기본값에서 변경해 줄 사항은 없으나 필요에 따라서 theme 부분을 본인이 원하는 것으로 바꿔준다. (제 경우는 icy Dark로 했습니다) 여기까지 진행했다면, Enable Utterances 부분에 그렇다면 자동으로 코드가 생성된 것을 볼 수 있을 것이다.
+[https://utteranc.es/](https://utteranc.es/) 에서 설정을 해준다. configuration의 Repository의 repo: 부분은 inazuel/blog-comments 를 입력한다. 나머지는 기본값에서 변경해 줄 사항은 없으나 필요에 따라서 theme 부분을 본인이 원하는 것으로 바꿔준다. (제 경우는 icy Dark로 했습니다) 여기까지 진행했다면, Enable Utterances 부분에 그렇다면 아래와 같은 형식으로 코드가 생성된 것을 볼 수 있다.
+
+```
+<script src="https://utteranc.es/client.js"
+        repo="[ENTER REPO HERE]"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+어디까지나 샘플이며, 이후 필요하다면, 일부 설정을 바꿀 수도 있다. theme의 기본 옵션으로는 ```github-light```, ```github-dark```, ```preferred-color-scheme```, ```github-dark-orange```, ```icy-dark```, ```dark-blue```, ```photon-dark```, ```boxy-light```, ```gruvbox-dark``` 가 있다.
 
 # blog theme 파일 수정 및 추가
 
@@ -39,7 +50,7 @@ Only select repositories에서 댓글용으로 만든 repositories를 선택한�
 
 ## 5. params.toml 내용 추가
 
-```inazuel.github.io/config/_default/params.toml```의 ```[article]``` 하단부에 ```showComments = true```를 추가해준다. 여기에서 하단이라 함은 [article] 하단부인데 이것은 편의상 위치를 지정한 것이다.
+```inazuel.github.io/config/_default/params.toml```의 ```[article]``` 하단부에 ```showComments = true```를 추가한다.
 
 ## 6. single.html 파일 복사
 
