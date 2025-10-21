@@ -1,3 +1,15 @@
 baseURL = 'http://inazuel.github.io/'
 languageCode = 'kr-ko'
 title = 'A star of wisdom'
+
+[cascade]
+  # 'hugo_blog' 섹션 아래의 모든 페이지에 이 설정을 적용합니다.
+  [cascade."hugo_blog"]
+    # Hugo에게 이 섹션의 URL 경로를 '/posts/'로 생성하도록 지시합니다.
+    # 즉, 폴더명은 hugo_blog로 유지하면서 URL 경로는 posts로 나옵니다.
+    slug = "/posts" 
+
+[permalinks]
+  # 이 설정을 추가하여 포스트 링크 구조를 명확히 합니다. 
+  # Hugo는 'hugo_blog' 섹션의 포스트에 대해 이 permalinks 규칙을 사용합니다.
+  hugo_blog = "/posts/:year/:month/:day/:slug/"
