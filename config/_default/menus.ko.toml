@@ -20,10 +20,10 @@
   pageRef = "hugo_blog"
   weight = 10
 
-[[main]]
-  name = "블로그"
-  pageRef = "life_log"
-  weight = 10
+#[[main]]
+#  name = "블로그"
+#  pageRef = "life_log"
+#  weight = 10
 
 # [[main]]
 #   name = "포스트-블로그"
