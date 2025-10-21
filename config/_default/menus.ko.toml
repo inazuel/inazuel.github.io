@@ -17,7 +17,7 @@
 
 [[main]]
   name = "블로그"
-  pageRef = "posts"
+  pageRef = "categories"
   weight = 10
 
 # [[main]]
@@ -38,9 +38,9 @@
 #  weight = 10
 
 #[[subnavigation]]
-#  name = "My Awesome Category"
+#  name = "hugo_blog"
 #  pre = "github"
-#  pageRef = "categories/awesome"
+#  pageRef = "categories/hugo_blog"
 #  weight = 20
 
 #[[main]]
