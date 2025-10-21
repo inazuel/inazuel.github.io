@@ -1,0 +1,25 @@
+/* 1. D2Coding 폰트 선언 (사이트 기본 폰트) */
+@font-face {
+    font-family: "D2CodingFont";
+    src: url('/fonts/D2Coding-Ver1.3.2-20180524.ttf');
+}
+
+/* 2. EBS 훈민정음R 폰트 선언 (메뉴 폰트) */
+@font-face {
+    font-family: "EBSHunminRFont";
+    src: url('/fonts/EBS훈민정음R.ttf');
+}
+
+/* ================================================= */
+
+/* 3. HTML 전체에 D2Coding 폰트 적용 (메뉴 외 모든 부분) */
+html {
+    font-family: "D2CodingFont", monospace;
+}
+
+/* 4. Main Menu와 모바일 메뉴에 EBS 훈민정음R 폰트 적용 (D2Coding을 덮어씀) */
+.main-menu nav p, 
+#menu-wrapper ul p { 
+    font-family: "EBSHunminRFont", sans-serif !important;
+    /* !important는 Blowfish 테마의 Tailwind 기본값을 확실하게 덮어쓰기 위해 유지하는 것이 좋습니다. */
+}
