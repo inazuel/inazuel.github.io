@@ -11,13 +11,18 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "소개"
+  name = "프로필"
   pageRef = "page"
   weight = 10
 
 [[main]]
   name = "블로그"
-  pageRef = "categories"
+  pageRef = "hugo_blog"
+  weight = 10
+
+[[main]]
+  name = "블로그"
+  pageRef = "life_log"
   weight = 10
 
 # [[main]]
