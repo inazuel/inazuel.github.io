@@ -6,8 +6,8 @@
 
 /* 2. EBS 훈민정음R 폰트 선언 (메뉴 폰트) */
 @font-face {
-    font-family: "EBSHunminRFont";
-    src: url('/fonts/EBS훈민정음R.ttf');
+    font-family: "EBSHunminjeongeumR";
+    src: url('/fonts/EBSHunminjeongeumR.ttf');
 }
 
 /* ================================================= */
@@ -20,6 +20,6 @@ html {
 /* 4. Main Menu와 모바일 메뉴에 EBS 훈민정음R 폰트 적용 (D2Coding을 덮어씀) */
 .main-menu nav p, 
 #menu-wrapper ul p { 
-    font-family: "EBSHunminRFont", sans-serif !important;
+    font-family: "EBSHunminjeongeumR", sans-serif !important;
     /* !important는 Blowfish 테마의 Tailwind 기본값을 확실하게 덮어쓰기 위해 유지하는 것이 좋습니다. */
 }
