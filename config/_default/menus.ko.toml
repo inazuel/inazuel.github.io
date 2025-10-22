@@ -23,13 +23,13 @@
 [[main]]
   name = "휴고"
   parent = "블로그"
-  pageRef = "posts/lifelog"
+  pageRef = "posts/hugo_blog"
   weight = 20
 
 [[main]]
   name = "라이프로그"
   parent = "블로그"
-  pageRef = "posts/hugo_blog"
+  pageRef = "posts/lifelog"
   weight = 20
 
 #[[main]]
