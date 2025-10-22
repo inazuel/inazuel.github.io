@@ -30,7 +30,7 @@
   name = "라이프로그"
   parent = "블로그"
   pageRef = "posts/lifelog"
-  weight = 20
+  weight = 10
 
 #[[main]]
 #  name = "블로그"
