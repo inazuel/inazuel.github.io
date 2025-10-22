@@ -24,19 +24,19 @@
   name = "휴고"
   parent = "블로그"
   pageRef = "posts/hugo_blog"
-  weight = 10
+  weight = 30
 
 [[main]]
   name = "라이프로그"
   parent = "블로그"
   pageRef = "posts/lifelog"
-  weight = 20
+  weight = 40
 
 [[main]]
   name = "테스트"
   parent = "블로그"
   pageRef = "posts/test"
-  weight = 30
+  weight = 50
 
 #[[main]]
 #  name = "블로그"
