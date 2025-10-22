@@ -18,7 +18,7 @@
 [[main]]
   name = "블로그"
   pageRef = "posts"
-  weight = 10
+  weight = 20
 
 [[main]]
   name = "휴고"
