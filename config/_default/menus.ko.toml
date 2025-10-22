@@ -32,6 +32,12 @@
   pageRef = "posts/lifelog"
   weight = 20
 
+[[main]]
+  name = "테스트"
+  parent = "블로그"
+  pageRef = "posts/test"
+  weight = 30
+
 #[[main]]
 #  name = "블로그"
 #  pageRef = "life_log"
