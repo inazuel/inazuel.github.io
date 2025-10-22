@@ -17,25 +17,25 @@
 
 [[main]]
   name = "블로그"
-  pageRef = "hugo_blog"
+  pageRef = "posts"
   weight = 10
+
+[[main]]
+  name = "휴고"
+  parent = "블로그"
+  pageRef = "posts"
+  weight = 20
+
+[[main]]
+  name = "라이프로그"
+  parent = "블로그"
+  pageRef = "posts"
+  weight = 20
 
 #[[main]]
 #  name = "블로그"
 #  pageRef = "life_log"
 #  weight = 10
-
-# [[main]]
-#   name = "포스트-블로그"
-#   parent = "포스트"
-#   pageRef = "posts"
-#   weight = 20
-
-#[[main]]
-#  name = "포스트-라이프로그"
-#  parent = "포스트"
-#  pageRef = "posts"
-#  weight = 20
 
 #[[subnavigation]]
 #  name = "An interesting topic"
