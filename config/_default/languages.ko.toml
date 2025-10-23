@@ -17,17 +17,17 @@ title = "A star of wisdom"
   
   # 저작권 문구를 수정합니다.
   # Blowfish 테마는 "{year}" 플레이스홀더를 현재 연도로 자동 대체합니다.
-  copyright = "Copyright © 2025–{year} A star of wisdom. All rights reserved."
+  copyright = "&copy; 2025–{year} A star of wisdom. All rights reserved."
   
   # ... 나머지 설정 ...
 
-# [params.author]
-  name = "inazuel"
+ [params.author]
+  name = "admin"
 #   email = "youremail@example.com"
-#   image = "img/blowfish_logo.png"
-#   imageQuality = 96
-#   headline = "I'm only human"
-#   bio = "A little bit about you"
+   image = "img/blowfish_logo.png"
+   imageQuality = 96
+   headline = "I'm only human"
+   bio = "A little bit about you"
 #   links = [
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },
