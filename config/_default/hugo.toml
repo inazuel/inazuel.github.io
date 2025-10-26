@@ -23,8 +23,8 @@ enableEmoji = true
 # Git 커밋 날짜 자동 기록 설정 시작
 enableGitInfo = true
 [frontmatter]
-lastmod = ["lastmod", ":git", "date", "publishDate"]
-date = ["date", "publishDate", ":git"]
+date = ["date", "publishDate", "lastmod", ":git"]
+lastmod = ["lastmod", "date", "publishDate", ":git"]
 # Git 커밋 날짜 자동 기록 설정 완료
 
 

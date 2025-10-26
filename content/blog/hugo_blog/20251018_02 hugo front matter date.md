@@ -6,7 +6,7 @@ author = 'admin'
 
 # 개요
 
-hugo로 포스트를 작성하다 보면 매번 front matter에 date 값을 입력해야 한다. 이런 불편함을 최소화하기 위해 여기에서는 date와 lastmod를 자동으로 입력되게 하는 방법을 알아보기로 한다.
+hugo로 포스트를 작성하다 보면 매번 front matter에 date 값을 입력해야 한다. 이런 불편함을 최소화하기 위해 여기에서는 date와 lastmod를 자동으로 입력되게 하는 방법을 Gemini로 찾았다.
 
 ## hugo.toml 편집
 
@@ -16,8 +16,8 @@ hugo로 포스트를 작성하다 보면 매번 front matter에 date 값을 입�
 ```python
 enableGitInfo = true
 [frontmatter]
-lastmod = ["lastmod", ":git", "date", "publishDate"]
-date = ["date", "publishDate", ":git"]
+date = ["date", "publishDate", "lastmod", ":git"]
+lastmod = ["lastmod", "date", "publishDate", ":git"]
 ```
 
 ## front matter 필드 변경
