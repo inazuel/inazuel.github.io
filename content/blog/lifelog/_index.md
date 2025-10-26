@@ -1,6 +1,4 @@
 +++
 title = "라이프로그"
-[params]
-  # 이 문자열 값이 default_category에 들어갑니다.
-  default_category = "라이프로그" 
+draft = false
 +++
