@@ -149,3 +149,22 @@
     <div class="{{ cond $isAuthorBottom "mb-10" "mb-5" }}"></div>
   {{ end }}
 {{ end }}
+
+
+{{/* 20251027 추가 시작부분 */}}
+{{/* layouts/_default/single.html 또는 포스트 레이아웃 파일 */}}
+
+{{- $categories := .Params.categories -}}
+
+{{- if not $categories -}}
+  {{- $sectionCategory := .CurrentSection.Params.default_category -}}
+  {{- if $sectionCategory -}}
+    {{- $categories = slice $sectionCategory -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* 최종 categories 출력 */}}
+{{- range $categories -}}
+  <a href="{{ site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a>
+{{- end -}}
+{{/* 20251027 추가 끝 */}}
