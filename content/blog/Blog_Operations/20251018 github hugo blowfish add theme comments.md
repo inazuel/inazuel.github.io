@@ -1,7 +1,6 @@
 +++
 title = 'github hugo blowfish theme 댓글 추가하기'
-draft = false
-showComments = true
+categories = ["블로그 관리"]
 +++
 
 # 개요

@@ -1,7 +1,6 @@
 +++
 title = 'github hugo에서 date와 lastmod 자동 입력'
-draft = false
-author = 'admin'
+categories = ["블로그 관리"]
 +++
 
 # 개요
