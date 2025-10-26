@@ -17,7 +17,8 @@ buildFuture = false
 
 enableEmoji = true
 
-# googleAnalytics = "G-XXXXXXXXX"
+# 20251027 변경
+googleAnalytics = "GTM-NW94HG8Z"
 
 
 # Git 커밋 날짜 자동 기록 설정 시작
