@@ -1,4 +1,5 @@
 +++
 title = "테스트"
-layout = "list"
+[params]
+  default_category = "테스트" 
 +++
