@@ -50,6 +50,26 @@
         {{ partial "series/series.html" . }}
         <div class="article-content max-w-prose mb-20">
           {{ .Content }}
+
+          {{/* 20251027 추가 시작부분 */}}
+          {{/* layouts/_default/single.html 또는 포스트 레이아웃 파일 */}}
+
+          {{- $categories := .Params.categories -}}
+
+          {{- if not $categories -}}
+            {{- $sectionCategory := .CurrentSection.Params.default_category -}}
+            {{- if $sectionCategory -}}
+              {{- $categories = slice $sectionCategory -}}
+            {{- end -}}
+          {{- end -}}
+
+          {{/* 최종 categories 출력 */}}
+          {{- range $categories -}}
+            <a href="{{ site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a>
+          {{- end -}}
+          {{/* 20251027 추가 끝 */}}
+
+
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}
@@ -150,21 +170,3 @@
   {{ end }}
 {{ end }}
 
-
-{{/* 20251027 추가 시작부분 */}}
-{{/* layouts/_default/single.html 또는 포스트 레이아웃 파일 */}}
-
-{{- $categories := .Params.categories -}}
-
-{{- if not $categories -}}
-  {{- $sectionCategory := .CurrentSection.Params.default_category -}}
-  {{- if $sectionCategory -}}
-    {{- $categories = slice $sectionCategory -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* 최종 categories 출력 */}}
-{{- range $categories -}}
-  <a href="{{ site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a>
-{{- end -}}
-{{/* 20251027 추가 끝 */}}
