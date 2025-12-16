@@ -20,23 +20,7 @@
   pageRef = "blog"
   weight = 2
 
-[[main]]
-  name = "블로그 관리"
-  parent = "블로그"
-  pageRef = "blog/Blog_Operations"
-  weight = 3
 
-[[main]]
-  name = "라이프로그"
-  parent = "블로그"
-  pageRef = "blog/lifelog"
-  weight = 4
-
-[[main]]
-  name = "테스트"
-  parent = "블로그"
-  pageRef = "blog/test"
-  weight = 5
 
 #[[main]]
 #  name = "블로그"
@@ -70,12 +54,12 @@
 # the copyright notice. Configure as per the main menu above.
 
 
-# [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 10
 
-# [[footer]]
-#   name = "Categories"
-#   pageRef = "categories"
-#   weight = 20
+[[footer]]
+  name = "Categories"
+  pageRef = "categories"
+  weight = 20
