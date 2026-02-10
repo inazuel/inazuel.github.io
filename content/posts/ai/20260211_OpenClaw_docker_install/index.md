@@ -20,13 +20,13 @@ tags = ["ai", "OpenClaw", "Docker", "lm_studio"]
 
 &nbsp;&nbsp;[https://docs.openclaw.ai/install#after-install](https://docs.openclaw.ai/install#after-install)를 참고하여 OpenClaw를 설치한다. 윈도우11을 사용하는 상황이기에 ```Windows PowerShell```에서 아래의 명령어로 설치를 진행하면 된다. 그러나 이 방법은 간략하게 넘어갈 것이다. 나는 Docker에 설치할 것이기 때문이다.
 
-```
+```PowerShell
 iwr -useb https://openclaw.ai/install.ps1 | iex
 ```
 
 &nbsp;&nbsp;만약 OpneClaw를 삭제하고 싶다면 아래의 명령어를 실행하면 된다.
 
-```
+```PowerShell
 openclaw uninstall
 ```
 
@@ -131,8 +131,6 @@ wsl --install
 ```PowerShell
 docker compose run --rm openclaw-cli dashboard --no-open
 ```
-
-http://127.0.0.1:18789/#token=a80b25491ee8f0ac953ff18d3eb65259cc48964fadcec0c7
 
 #### 3.3.3.8. Enable zsh shell completion for openclaw?
 
