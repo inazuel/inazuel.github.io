@@ -1,8 +1,9 @@
 +++
-date = 2026-02-11T15:30:00+09:00
-title = '윈도우 11 Docker에 OpenClaw 설치 및 사용'
-categories = ["AI"]
-tags = ['ai', 'openclaw', 'docker', 'lmstudio']
+title = "윈도우에서 Docker에 OpenClaw 설치 및 사용"
+date = 2026-02-10T23:42:33+09:00
+draft = false
+categories = ["AI/OpenClaw"]
+tags = ["ai", "OpenClaw", "Docker", "lm_studio"]
 +++
 
 # 1. 들어가며
@@ -246,6 +247,6 @@ docker-compose up -d
 
 # 4. 마치며
 
-&nbsp;&nbsp; 지금까지 docker desktop(wsl2, docker compose v2), Open Claw 설치 및 설정과 LM Studio 연동하는 방법을 기록해 두었다. 이것이 설명 내지는 방법이 아닌 기록인 이유는 나의 목적(무료로 open claw를 한번 가동해 보는 것)에 부합한 방식 그리고 그것을 실제로 해보며, 내가 겪은 어려움을 기록했기 때문이다. 비슷한 이유로, LM Studio를 사용한 것도 Ollama보다 설치와 설정이 편하다는 장점이 있으며, kt의 llm인 midm도 원래 사용하던 것으로 별도의 llm을 다운로드 할 필요성을 크게 느끼지 못했기 때문이지 다른 의미는 없다.
+&nbsp;&nbsp; 지금까지 docker desktop(wsl2, docker compose v2), Open Claw 설치 및 설정과 LM Studio 연동하는 방법을 기록해 두었다. 기록이라 명명한 이유는 나의 목적(무료로 open claw를 한번 가동해 보는 것)에 부합한 방식 그리고 그것을 실제로 해보며, 내가 겪은 어려움을 기록했기 때문이다. 현재 ai의 도움을 받아서 윈도우 환경에서 docker에 OpenClaw를 설치하기에는 어려운 부분이 있다. 아무래도 인터넷에 정보가 별로 없어서(=ai가 학습할 자료가 적어서) 그러한 것으로 추측된다.
 
-&nbsp;&nbsp;그럼에도 이것을 블로그에 올리는 것은 나중에 비슷한 방식으로 사용을 하실 분들이 만에 하나라도 있다면 소소하게나마 도움이 되기를 바라고 올리는 바이다.
+&nbsp;&nbsp;추후에 가능하다면 미처 못다 한 설정을 마저 마무리하는 글을 쓰도록 최대한 노력해보겠다.
