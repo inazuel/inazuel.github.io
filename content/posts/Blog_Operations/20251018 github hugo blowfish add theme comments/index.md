@@ -1,6 +1,9 @@
 +++
 title = 'github hugo blowfish theme 댓글 추가하기'
+date = 2026-02-10T23:42:33+09:00
+draft = false
 categories = ["블로그 관리"]
+tags = ['hugo', 'blog', 'utterances', 'git']
 +++
 
 # 개요

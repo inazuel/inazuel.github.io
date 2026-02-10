@@ -1,5 +1,7 @@
 +++
 title = 'github hugo에서 date와 lastmod 자동 입력'
+date = 2026-02-10T23:42:33+09:00
+draft = false
 categories = ["블로그 관리"]
 tags = ['hugo', 'blog', 'frontmatter', 'git']
 +++

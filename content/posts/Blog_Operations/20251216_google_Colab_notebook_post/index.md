@@ -1,5 +1,7 @@
 +++
 title = 'colab notebook에서 nbconvert를 사용하여 ipynb를 md로 변환 및 git commit'
+date = 2026-02-10T23:42:33+09:00
+draft = false
 categories = ["블로그 관리"]
 tags = ['hugo', 'blog', 'colab', 'ipynb', 'md']
 +++
