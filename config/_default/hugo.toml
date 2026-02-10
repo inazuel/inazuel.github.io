@@ -29,13 +29,6 @@ date = ["date", "publishDate", "lastmod", ":git"]
 lastmod = ["lastmod", "date", "publishDate", ":git"]
 # Git 커밋 날짜 자동 기록 설정 완료
 
-# draft 옵션이 content 및 하위 폴더 전체에 적용되도록 설정
-[[cascade]]
-  [cascade.fields]
-    draft = false
-  [cascade._target]
-    path = "/posts/**" # 'posts' 폴더 내 모든 파일 대상
-# draft 옵션 설정 완료
 
 [pagination]
   pagerSize = 100
