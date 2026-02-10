@@ -11,21 +11,25 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "프로필"
-  pageRef = "profile/index.md"
-  weight = 1
-
-[[main]]
-  name = "블로그"
-  pageRef = "blog"
-  weight = 2
-
-
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
 
 #[[main]]
-#  name = "블로그"
-#  pageRef = "life_log"
-#  weight = 10
+#  name = "Parent"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 1"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
 
 #[[subnavigation]]
 #  name = "An interesting topic"
@@ -33,9 +37,9 @@
 #  weight = 10
 
 #[[subnavigation]]
-#  name = "hugo_blog"
+#  name = "My Awesome Category"
 #  pre = "github"
-#  pageRef = "categories/hugo_blog"
+#  pageRef = "categories/awesome"
 #  weight = 20
 
 #[[main]]
