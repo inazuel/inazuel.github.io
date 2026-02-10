@@ -34,7 +34,7 @@ lastmod = ["lastmod", "date", "publishDate", ":git"]
   [cascade.fields]
     draft = false
   [cascade._target]
-    path = "/**"
+    path = "/posts/**" # 'posts' 폴더 내 모든 파일 대상
 # draft 옵션 설정 완료
 
 [pagination]
