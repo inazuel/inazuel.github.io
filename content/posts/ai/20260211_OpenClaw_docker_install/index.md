@@ -1,5 +1,5 @@
 +++
-title = "윈도우에서 Docker에 OpenClaw 설치 및 사용"
+title = "윈도우에서 Docker에 OpenClaw 설치 및 로컬 LLM 연결"
 date = 2026-02-10T23:42:33+09:00
 draft = false
 categories = ["AI/OpenClaw"]
@@ -175,7 +175,7 @@ docker-compose up -d
 
 &nbsp;&nbsp;컨텍스트 길이(Context Length)는 LM Studio의 chat 화면에서 톱니바퀴를 클릭하면 확인할 수 있다. 컨텍스트 길이는 JSON 파일 내 contextWindow와 동일하게 설정해야 한다. 또한, LM Studio를 재실행하면 초기화된다. 그렇기에 재실행을 하면 매번 재설정해야 한다. 내 경우 llm 모델의 크기는 타협하고 컨텍스트 길이를 최댓값으로 해뒀지만, llm 크기와 PC 사양 등을 고려해서 적절하게 조정하는 것이 좋다고 한다.
 
-```
+```JSON5
 {
   "agents": {
     "defaults": {
