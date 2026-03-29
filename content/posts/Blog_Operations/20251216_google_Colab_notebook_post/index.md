@@ -1,9 +1,9 @@
 +++
-title = 'colab notebook에서 nbconvert를 사용하여 ipynb를 md로 변환 및 git commit'
-date = 2026-02-10T23:42:33+09:00
+title = 'colab notebook에서 nbconvert를 사용하여 ipynb를 md로 변환'
+date = 2025-12-16T09:00:00+09:00
 draft = false
-categories = ["블로그 관리"]
-tags = ['hugo', 'blog', 'colab', 'ipynb', 'md']
+categories = ["블로그 운영"]
+tags = ["blog", "blog_setting", "colab_notebook", "nbconvert"]
 +++
 
 &nbsp;&nbsp; 구글 코랩 노트북(colab notebook)에서 hugo blog의 포스팅을 하기 위해서 글을 쓰는 방법이 있다. hugo blog를 비롯한 md로 포스팅을 하는 블로그 서비스(hexo, pelican, jekyll ...) 코랩에서는 기본적으로 nbconvert가 설치되어있어서 명령어로 ipynb 파일을 md로 변경할 수 있다. 또한 온라인 서비스이기 때문에 외부에서 접속해서 글을 작성할 수 있다는 점이 있다. 이것은 인터넷 연결만 되어있다면, 공용 컴퓨터 혹은 모바일 환경에서도 포스팅이 가능해진다는 것을 의미한다.
